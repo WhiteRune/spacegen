@@ -1,0 +1,13 @@
+Task: Convert narration text into SSML suitable for English TTS.
+
+Inputs:
+- scene_id (int)
+- narration (string)
+- estimated_seconds (int)
+
+Rules:
+- Insert <break time="...ms"/> at natural sentence boundaries: for sentences estimated ≤8s use 300ms, for 8–16s use 500ms.
+- Add prosody/emphasis for numeric facts: wrap numbers with <emphasis level="moderate">...</emphasis>.
+- Ensure SSML is valid and minimal (no extraneous commentary).
+
+Output JSON: {"scene_id":int, "ssml":string, "timings_hint": [seconds_per_sentence,...]}

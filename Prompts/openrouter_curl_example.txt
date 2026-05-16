@@ -1,0 +1,17 @@
+OpenRouter curl example (replace placeholders):
+
+curl -X POST "https://api.openrouter.ai/v1/chat/completions" \
+  -H "Authorization: Bearer $OPENROUTER_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model":"anthropic/claude-2.1",
+    "messages":[
+      {"role":"system","content":"[paste system prompt from Prompts/system.txt]"},
+      {"role":"user","content":"[paste one of the user prompts from Prompts/*.txt with filled variables]"}
+    ],
+    "max_tokens":1000
+  }'
+
+Notes:
+- Use the system prompt from Prompts/system.txt.
+- Provide only up to 5 retrieved documents in the user message when asking for scene-level scripts.

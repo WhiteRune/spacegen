@@ -1,0 +1,20 @@
+Task: Fact-check claims against candidate documents.
+
+Inputs:
+- claims: array of {claim_id, text}
+- candidate_docs: array of documents {url, title, excerpt}
+
+Instruction:
+For each claim, check whether it is directly supported, partially supported, contradicted, or not found in candidate_docs. Return a JSON array of results, each with fields:
+- claim_id
+- supported: "true" | "false" | "uncertain"
+- best_source_url (or null)
+- excerpt (string or null)
+- confidence (0-1)
+- note (brief explanation)
+
+Scoring rules:
+- supported=true only if a doc contains a direct statement or data matching the claim.
+- uncertain if partial or contextual support exists.
+- false if a doc directly contradicts the claim.
+- If no doc matches, set supported=false, best_source_url=null, confidence=0, note="not_found".

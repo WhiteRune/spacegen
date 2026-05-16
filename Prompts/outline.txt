@@ -1,0 +1,13 @@
+Task: Create an outline for a short educational YouTube video.
+
+Template variables: {length_seconds}, {topic}, {scenes_count}
+
+Instruction:
+Create an outline for a {length_seconds}-second video about "{topic}". Produce exactly {scenes_count} scenes. For each scene output the following JSON object fields:
+- id (int)
+- title (one short sentence)
+- purpose (1 line)
+- estimated_seconds (int)
+- keywords (array of 1-2 keywords for retrieval)
+
+Return a JSON array of scenes only. Do not include any additional text or explanation.
