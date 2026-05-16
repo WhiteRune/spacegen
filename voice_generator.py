@@ -109,6 +109,59 @@ class VoiceGenerator:
                 time.sleep(2)
             return False
 
+    def get_audio_duration(self, file_path: str) -> float:
+        """Get duration of an audio file in seconds using ffprobe."""
+        ffprobe_path = shutil.which("ffprobe")
+        
+        if not ffprobe_path:
+            return 0.0
+        
+        try:
+            result = subprocess.run(
+                [
+                    ffprobe_path,
+                    "-v", "error",
+                    "-show_entries", "format=duration",
+                    "-of", "default=noprint_wrappers=1:nokey=1:nokey=1",
+                    file_path
+                ],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            
+            if result.stdout.strip():
+                return float(result.stdout.strip())
+        except Exception as e:
+            logger.warning(f"Could not get duration for {file_path}: {e}")
+        
+        return 0.0
+    
+    def format_duration(self, seconds: float) -> str:
+        """Format duration in seconds to HH:MM:SS format."""
+        hours = int(seconds // 3600)
+        minutes = int((seconds % 3600) // 60)
+        secs = int(seconds % 60)
+        
+        if hours > 0:
+            return f"{hours}h {minutes}m {secs}s"
+        elif minutes > 0:
+            return f"{minutes}m {secs}s"
+        else:
+            return f"{secs}s"
+    
+    def get_total_duration(self) -> float:
+        """Calculate total duration of all MP3 files in output directory."""
+        total_duration = 0.0
+        mp3_files = [f for f in os.listdir(self.output_dir) if f.lower().endswith('.mp3')]
+        
+        for mp3_file in mp3_files:
+            file_path = Path(self.output_dir) / mp3_file
+            duration = self.get_audio_duration(str(file_path))
+            total_duration += duration
+        
+        return total_duration
+
     def convert_pcm_to_mp3(self, force: bool = False) -> int:
         """Convert all PCM files to MP3 using ffmpeg."""
         
@@ -281,7 +334,21 @@ def main():
         logger.info(f"\n🔄 Starting PCM to MP3 conversion...\n")
         generator.convert_pcm_to_mp3(force=args.force_convert)
     
-    logger.info(f"\n📁 Audio files saved to: {args.output_dir}")
+    # Calculate and display total audio duration
+    logger.info(f"\n📊 Calculating total audio duration...")
+    total_duration = generator.get_total_duration()
+    formatted_duration = generator.format_duration(total_duration)
+    
+    # Count MP3 files
+    mp3_files = [f for f in os.listdir(args.output_dir) if f.lower().endswith('.mp3')]
+    
+    logger.info(f"\n{'=' * 70}")
+    logger.info(f"✨ VOICE GENERATION SUMMARY")
+    logger.info(f"{'=' * 70}")
+    logger.info(f"📁 Output directory: {args.output_dir}")
+    logger.info(f"🎵 Total audio files: {len(mp3_files)} MP3 files")
+    logger.info(f"⏱️  Total audio duration: {formatted_duration}")
+    logger.info(f"{'=' * 70}")
 
 
 if __name__ == "__main__":

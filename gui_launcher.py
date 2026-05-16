@@ -9,6 +9,7 @@ import subprocess
 import os
 import json
 import sys
+import shutil
 from pathlib import Path
 import threading
 
@@ -149,10 +150,13 @@ class VideoGeneratorGUI:
         voice_button_frame.grid(row=17, column=0, columnspan=3, pady=10, sticky=(tk.W, tk.E))
         
         self.generate_voice_button = ttk.Button(voice_button_frame, text="🎙️ Generate Voice Over", command=self.generate_voice)
-        self.generate_voice_button.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 5))
+        self.generate_voice_button.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 3))
         
         self.cancel_voice_button = ttk.Button(voice_button_frame, text="⛔ Cancel Voice", command=self.cancel_voice_generation, state=tk.DISABLED)
-        self.cancel_voice_button.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(5, 0))
+        self.cancel_voice_button.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(3, 3))
+        
+        summary_button = ttk.Button(voice_button_frame, text="📊 Voice Summary", command=self.show_voice_summary)
+        summary_button.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(3, 0))
         
         # Status text area
         ttk.Label(main_frame, text="Status:", font=("Arial", 10, "bold")).grid(row=18, column=0, sticky=tk.W, pady=(10, 5))
@@ -458,6 +462,94 @@ class VideoGeneratorGUI:
             self.is_generating_voice = False
             self.voice_process = None
             self._update_button_states()
+    
+    def get_audio_duration(self, file_path: str) -> float:
+        """Get duration of an audio file in seconds using ffprobe."""
+        ffprobe_path = shutil.which("ffprobe")
+        
+        if not ffprobe_path:
+            return 0.0
+        
+        try:
+            result = subprocess.run(
+                [
+                    ffprobe_path,
+                    "-v", "error",
+                    "-show_entries", "format=duration",
+                    "-of", "default=noprint_wrappers=1:nokey=1:nokey=1",
+                    file_path
+                ],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            
+            if result.stdout.strip():
+                return float(result.stdout.strip())
+        except Exception:
+            pass
+        
+        return 0.0
+    
+    def format_duration(self, seconds: float) -> str:
+        """Format duration in seconds to HH:MM:SS format."""
+        hours = int(seconds // 3600)
+        minutes = int((seconds % 3600) // 60)
+        secs = int(seconds % 60)
+        
+        if hours > 0:
+            return f"{hours}h {minutes}m {secs}s"
+        elif minutes > 0:
+            return f"{minutes}m {secs}s"
+        else:
+            return f"{secs}s"
+    
+    def show_voice_summary(self):
+        """Display summary of generated voice files."""
+        voice_output_dir = self.voice_output_var.get().strip()
+        
+        if not os.path.exists(voice_output_dir):
+            messagebox.showerror("Error", f"Voice output directory not found: {voice_output_dir}")
+            return
+        
+        # Get MP3 files
+        mp3_files = sorted([f for f in os.listdir(voice_output_dir) if f.lower().endswith('.mp3')])
+        
+        if not mp3_files:
+            messagebox.showinfo("Info", f"No MP3 files found in:\n{voice_output_dir}")
+            return
+        
+        # Calculate total duration
+        total_duration = 0.0
+        for mp3_file in mp3_files:
+            file_path = os.path.join(voice_output_dir, mp3_file)
+            duration = self.get_audio_duration(file_path)
+            total_duration += duration
+        
+        formatted_duration = self.format_duration(total_duration)
+        
+        # Display summary
+        self.status_text.config(state=tk.NORMAL)
+        self.status_text.delete(1.0, tk.END)
+        self.status_text.config(state=tk.DISABLED)
+        
+        self.log("=" * 70)
+        self.log("📊 VOICE GENERATION SUMMARY")
+        self.log("=" * 70)
+        self.log("")
+        self.log(f"📁 Output directory: {voice_output_dir}")
+        self.log(f"🎵 Total audio files: {len(mp3_files)} MP3 files")
+        self.log(f"⏱️  Total audio duration: {formatted_duration}")
+        self.log("")
+        self.log("Files:")
+        for i, mp3_file in enumerate(mp3_files, 1):
+            file_path = os.path.join(voice_output_dir, mp3_file)
+            file_size_kb = os.path.getsize(file_path) / 1024
+            duration = self.get_audio_duration(file_path)
+            duration_fmt = self.format_duration(duration)
+            self.log(f"  {i:3d}. {mp3_file:20s} | {file_size_kb:8.1f} KB | {duration_fmt}")
+        self.log("")
+        self.log("=" * 70)
     
     def generate(self):
         """Generate video package in separate thread."""
