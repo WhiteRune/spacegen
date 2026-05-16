@@ -1,0 +1,37 @@
+{
+  "id": 5,
+  "title": "A neutron star is about 20 km in diameter but has more mass than the Sun.",
+  "purpose": "Give a sense of scale and extreme density.",
+  "estimated_seconds": 20,
+  "keywords": [
+    "size",
+    "mass"
+  ],
+  "narration": "A neutron star packs more mass than our Sun into a sphere just twenty kilometers across. That makes it incredibly dense, with material compressed to densities far beyond anything on Earth.",
+  "ssml": "<speak>A neutron star packs more mass than our Sun into a sphere just <emphasis level=\"moderate\">twenty</emphasis> kilometers across.<break time=\"300ms\"/>That makes it incredibly dense, with material compressed to densities far beyond anything on Earth.</speak>",
+  "timings_hint": [
+    6.4,
+    6.0
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "5-1",
+      "text": "A neutron star is about 20 km in diameter but has more mass than the Sun.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "5-2",
+      "text": "Neutron stars have extremely high density, compressing matter beyond Earth-normal conditions.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

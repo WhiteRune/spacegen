@@ -1,0 +1,37 @@
+{
+  "id": 19,
+  "title": "Neutron stars can be found in binary systems.",
+  "purpose": "Explain that neutron stars often have companions.",
+  "estimated_seconds": 10,
+  "keywords": [
+    "binary system",
+    "companion"
+  ],
+  "narration": "Neutron stars often have companion stars, forming binary systems. These pairs provide unique insights into extreme physics.",
+  "ssml": "<speak>Neutron stars often have companion stars, forming binary systems.<break time=\"300ms\"/>These pairs provide unique insights into extreme physics.</speak>",
+  "timings_hint": [
+    5.33,
+    4.67
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "Neutron stars often have companion stars, forming binary systems.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c2",
+      "text": "These pairs provide unique insights into extreme physics.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

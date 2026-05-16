@@ -1,0 +1,37 @@
+{
+  "id": 14,
+  "title": "Their surface gravity is about 2\u00d710\u00b9\u00b9 times Earth's.",
+  "purpose": "Quantify the extreme gravity.",
+  "estimated_seconds": 10,
+  "keywords": [
+    "surface gravity",
+    "comparison"
+  ],
+  "narration": "Their surface gravity is roughly 200 billion times stronger than Earth's. To put that in perspective, you would be crushed instantly.",
+  "ssml": "<speak>Their surface gravity is roughly <emphasis level=\"moderate\">200 billion</emphasis> times stronger than Earth's.<break time=\"300ms\"/>To put that in perspective, you would be crushed instantly.</speak>",
+  "timings_hint": [
+    5.5,
+    4.5
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "c14_1",
+      "text": "Their surface gravity is roughly 200 billion times stronger than Earth's.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c14_2",
+      "text": "To put that in perspective, you would be crushed instantly.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": 22,
+  "title": "Orbital decay in that system matched predictions of gravitational waves.",
+  "purpose": "Explain indirect evidence for gravitational waves.",
+  "estimated_seconds": 20,
+  "keywords": [
+    "orbital decay",
+    "gravitational waves"
+  ],
+  "narration": "In a binary system of two neutron stars, their orbital decay precisely matched the predictions of general relativity for gravitational wave emission. This was strong indirect evidence for gravitational waves before direct detection.",
+  "ssml": "<speak>In a binary system of two neutron stars, their orbital decay precisely matched the predictions of general relativity for gravitational wave emission.<break time=\"500ms\"/>This was strong indirect evidence for gravitational waves before direct detection.</speak>",
+  "timings_hint": [
+    12,
+    8
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "22-claim-1",
+      "text": "Orbital decay in a binary neutron star system precisely matched predictions of general relativity for gravitational wave emission.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "22-claim-2",
+      "text": "This orbital decay provided strong indirect evidence for gravitational waves before direct detection.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

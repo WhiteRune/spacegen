@@ -1,0 +1,48 @@
+{
+  "id": 6,
+  "title": "One teaspoon of neutron star material weighs billions of tons.",
+  "purpose": "Illustrate density with a relatable comparison.",
+  "estimated_seconds": 15,
+  "keywords": [
+    "density",
+    "teaspoon"
+  ],
+  "narration": "Imagine a single teaspoon. Now imagine it filled with material from a neutron star. That tiny spoonful would weigh billions of tons, heavier than all of humanity combined. That's the incredible density of a neutron star.",
+  "ssml": "<speak>Imagine a single teaspoon.<break time=\"300ms\"/> Now imagine it filled with material from a neutron star.<break time=\"300ms\"/> That tiny spoonful would weigh <emphasis level=\"moderate\">billions</emphasis> of <emphasis level=\"moderate\">tons</emphasis>, heavier than all of humanity combined.<break time=\"300ms\"/> That's the incredible density of a neutron star.</speak>",
+  "timings_hint": [
+    2.5,
+    3.5,
+    5.5,
+    3.5
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "6-1",
+      "text": "A teaspoon of neutron star material weighs billions of tons.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "6-2",
+      "text": "That tiny spoonful would be heavier than all of humanity combined.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "6-3",
+      "text": "Neutron stars have incredible density.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

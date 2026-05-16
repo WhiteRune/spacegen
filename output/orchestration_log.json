@@ -1,0 +1,294 @@
+{
+  "topic": "neutron stars",
+  "length_seconds": 600,
+  "scenes_count": 40,
+  "global_queries": [
+    "neutron star equation of state observational data",
+    "neutron stars NASA",
+    "neutron star ESA",
+    "neutron star review Annual Reviews",
+    "neutron stars Science News"
+  ],
+  "scenes": [
+    {
+      "scene_id": 1,
+      "retrieved_doc_count": 0,
+      "total_claims": 1,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 1
+    },
+    {
+      "scene_id": 2,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 3,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 4,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 5,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 6,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 7,
+      "retrieved_doc_count": 0,
+      "total_claims": 4,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 4
+    },
+    {
+      "scene_id": 8,
+      "retrieved_doc_count": 0,
+      "total_claims": 1,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 1
+    },
+    {
+      "scene_id": 9,
+      "retrieved_doc_count": 0,
+      "total_claims": 5,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 5
+    },
+    {
+      "scene_id": 10,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 11,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 12,
+      "retrieved_doc_count": 0,
+      "total_claims": 1,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 1
+    },
+    {
+      "scene_id": 13,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 14,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 15,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 16,
+      "retrieved_doc_count": 0,
+      "total_claims": 4,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 4
+    },
+    {
+      "scene_id": 17,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 18,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 19,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 20,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 21,
+      "retrieved_doc_count": 0,
+      "total_claims": 1,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 1
+    },
+    {
+      "scene_id": 22,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 23,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 24,
+      "retrieved_doc_count": 0,
+      "total_claims": 6,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 6
+    },
+    {
+      "scene_id": 25,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 26,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 27,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 28,
+      "retrieved_doc_count": 0,
+      "total_claims": 1,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 1
+    },
+    {
+      "scene_id": 29,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 30,
+      "retrieved_doc_count": 0,
+      "total_claims": 4,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 4
+    },
+    {
+      "scene_id": 31,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 32,
+      "retrieved_doc_count": 0,
+      "total_claims": 4,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 4
+    },
+    {
+      "scene_id": 33,
+      "retrieved_doc_count": 0,
+      "total_claims": 3,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 3
+    },
+    {
+      "scene_id": 34,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 35,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 36,
+      "retrieved_doc_count": 0,
+      "total_claims": 1,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 1
+    },
+    {
+      "scene_id": 37,
+      "retrieved_doc_count": 0,
+      "total_claims": 2,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 2
+    },
+    {
+      "scene_id": 38,
+      "retrieved_doc_count": 0,
+      "total_claims": 4,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 4
+    },
+    {
+      "scene_id": 39,
+      "retrieved_doc_count": 0,
+      "total_claims": 4,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 4
+    },
+    {
+      "scene_id": 40,
+      "retrieved_doc_count": 0,
+      "total_claims": 1,
+      "claims_supported_count": 0,
+      "claims_needing_source_count": 1
+    }
+  ]
+}

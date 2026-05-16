@@ -1,0 +1,29 @@
+{
+  "id": 40,
+  "title": "Future missions like ATHENA will reveal more about neutron stars.",
+  "purpose": "End with a forward-looking statement and excitement.",
+  "estimated_seconds": 15,
+  "keywords": [
+    "ATHENA",
+    "future"
+  ],
+  "narration": "The future looks bright for neutron star research. Missions like ATHENA will peer into the most extreme environments in the universe, revealing secrets of matter under unimaginable pressure. Stay tuned\u2014the best discoveries are yet to come!",
+  "ssml": "<speak>The future looks bright for neutron star research.<break time=\"300ms\"/>Missions like ATHENA will peer into the most extreme environments in the universe, revealing secrets of matter under unimaginable pressure.<break time=\"500ms\"/>Stay tuned\u2014the best discoveries are yet to come!</speak>",
+  "timings_hint": [
+    3.0,
+    8.14,
+    3.86
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "40-1",
+      "text": "Future missions like ATHENA will reveal more about neutron stars.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

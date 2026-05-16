@@ -1,0 +1,48 @@
+{
+  "id": 18,
+  "title": "Magnetars can have starquakes that release huge bursts of gamma rays.",
+  "purpose": "Describe the activity of magnetars.",
+  "estimated_seconds": 20,
+  "keywords": [
+    "starquake",
+    "gamma-ray burst"
+  ],
+  "narration": "Magnetars are neutron stars with ultra-strong magnetic fields. They can undergo starquakes, which are violent crust fractures. These events release powerful gamma-ray bursts. This scene describes that activity.",
+  "ssml": "<speak>Magnetars are neutron stars with ultra-strong magnetic fields.<break time=\"300ms\"/>They can undergo starquakes, which are violent crust fractures.<break time=\"300ms\"/>These events release powerful gamma-ray bursts.<break time=\"300ms\"/>This scene describes that activity.</speak>",
+  "timings_hint": [
+    5.73,
+    6.37,
+    3.82,
+    3.18
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "1",
+      "text": "Magnetars are neutron stars with ultra-strong magnetic fields.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "2",
+      "text": "They can undergo starquakes, which are violent crust fractures.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "3",
+      "text": "These events release powerful gamma-ray bursts.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

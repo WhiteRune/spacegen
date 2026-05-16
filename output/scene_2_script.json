@@ -1,0 +1,47 @@
+{
+  "id": 2,
+  "title": "They form when massive stars explode as supernovae.",
+  "purpose": "Explain the basic formation process of neutron stars.",
+  "estimated_seconds": 20,
+  "keywords": [
+    "formation",
+    "supernova"
+  ],
+  "narration": "Neutron stars form when massive stars explode as supernovae. During the explosion, the core collapses into an incredibly dense ball of neutrons. This creates an object just a few kilometers wide but with more mass than our Sun.",
+  "ssml": "<speak>Neutron stars form when massive stars explode as supernovae.<break time=\"300ms\"/> During the explosion, the core collapses into an incredibly dense ball of neutrons.<break time=\"300ms\"/> This creates an object just a few kilometers wide but with more mass than our Sun.</speak>",
+  "timings_hint": [
+    5,
+    7,
+    8
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "c2-1",
+      "text": "Neutron stars form when massive stars explode as supernovae.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c2-2",
+      "text": "During the explosion, the core collapses into an incredibly dense ball of neutrons.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c2-3",
+      "text": "This creates an object just a few kilometers wide but with more mass than our Sun.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

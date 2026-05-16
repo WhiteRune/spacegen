@@ -1,0 +1,37 @@
+{
+  "id": 15,
+  "title": "Inside, matter is crushed into a superfluid and superconducting state.",
+  "purpose": "Describe the exotic interior of neutron stars.",
+  "estimated_seconds": 20,
+  "keywords": [
+    "superfluid",
+    "superconductor"
+  ],
+  "narration": "Inside a neutron star, matter is crushed into a superfluid of neutrons and a superconducting state of protons. This exotic material has zero viscosity and zero electrical resistance, allowing electric currents to flow forever.",
+  "ssml": "<speak>Inside a neutron star, matter is crushed into a superfluid of neutrons and a superconducting state of protons.<break time=\"300ms\"/>This exotic material has <emphasis level=\"moderate\">zero</emphasis> viscosity and <emphasis level=\"moderate\">zero</emphasis> electrical resistance, allowing electric currents to flow forever.</speak>",
+  "timings_hint": [
+    7,
+    7
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "Inside a neutron star, matter is crushed into a superfluid of neutrons and a superconducting state of protons.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c2",
+      "text": "This exotic material has zero viscosity and zero electrical resistance, allowing electric currents to flow forever.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

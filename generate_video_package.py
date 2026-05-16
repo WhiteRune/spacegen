@@ -17,8 +17,12 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-import requests
+from openai import OpenAI
 from dotenv import load_dotenv
+
+# Fix encoding for Windows console
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding='utf-8')
 
 # Configure logging
 logging.basicConfig(
@@ -29,51 +33,47 @@ logger = logging.getLogger(__name__)
 
 
 class OpenRouterClient:
-    """Client for OpenRouter Chat Completions API with exponential backoff."""
+    """Client for OpenRouter Chat Completions API using OpenAI SDK."""
 
-    def __init__(self, api_key: str, model: str):
+    def __init__(self, api_key: str, model: str, enable_reasoning: bool = False):
         """Initialize client with API key and model."""
-        self.api_key = api_key
+        self.client = OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=api_key
+        )
         self.model = model
-        self.base_url = "https://api.openrouter.ai/v1/chat/completions"
+        self.enable_reasoning = enable_reasoning
         self.max_retries = 3
         self.base_wait = 1  # seconds
 
-    def _call_api(self, messages: List[Dict[str, str]], retry: int = 0) -> str:
+    def _call_api(self, messages: List[Dict[str, Any]], retry: int = 0) -> str:
         """Call OpenRouter API with exponential backoff on 429/5xx."""
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "model": self.model,
-            "messages": messages
-        }
-
         try:
-            response = requests.post(self.base_url, json=payload, headers=headers, timeout=30)
+            kwargs = {
+                "model": self.model,
+                "messages": messages,
+                "timeout": 60.0
+            }
             
-            if response.status_code in [429, 500, 502, 503, 504]:
-                if retry < self.max_retries:
-                    wait_time = self.base_wait * (2 ** retry)
-                    logger.warning(
-                        f"API returned {response.status_code}. "
-                        f"Retrying in {wait_time}s (attempt {retry + 1}/{self.max_retries})"
-                    )
-                    time.sleep(wait_time)
-                    return self._call_api(messages, retry + 1)
-                else:
-                    raise RuntimeError(
-                        f"Max retries exceeded. Status {response.status_code}: {response.text}"
-                    )
+            if self.enable_reasoning:
+                kwargs["extra_body"] = {"reasoning": {"enabled": True}}
             
-            response.raise_for_status()
-            result = response.json()
-            return result["choices"][0]["message"]["content"]
+            response = self.client.chat.completions.create(**kwargs)
+            
+            return response.choices[0].message.content
         
-        except requests.exceptions.RequestException as e:
-            logger.error(f"API request failed: {e}")
-            raise
+        except Exception as e:
+            if retry < self.max_retries and ("429" in str(e) or "500" in str(e) or "502" in str(e) or "503" in str(e) or "504" in str(e)):
+                wait_time = self.base_wait * (2 ** retry)
+                logger.warning(
+                    f"API error: {e}. "
+                    f"Retrying in {wait_time}s (attempt {retry + 1}/{self.max_retries})"
+                )
+                time.sleep(wait_time)
+                return self._call_api(messages, retry + 1)
+            else:
+                logger.error(f"API request failed: {e}")
+                raise
 
     def chat(self, system_message: str, user_message: str) -> str:
         """Send a chat completion request."""
@@ -113,14 +113,6 @@ def extract_json_from_response(response: str) -> Dict[str, Any] | List[Any]:
         raise ValueError(f"Could not extract valid JSON from response: {e}")
 
 
-def fill_template_variables(template: str, variables: Dict[str, Any]) -> str:
-    """Replace template variables like {topic}, {scenes_count} with actual values."""
-    result = template
-    for key, value in variables.items():
-        result = result.replace(f"{{{key}}}", str(value))
-    return result
-
-
 def generate_retrieval_queries(
     client: OpenRouterClient,
     system_msg: str,
@@ -130,11 +122,12 @@ def generate_retrieval_queries(
     """Generate global retrieval queries for the topic."""
     logger.info("Generating retrieval queries...")
     
-    # For global queries, use topic as the main input
-    user_message = fill_template_variables(
-        prompt_template,
-        {"topic": topic, "scene_keywords": json.dumps([topic])}
-    )
+    user_message = f"""{prompt_template}
+
+Topic: {topic}
+Scene Keywords: {topic}
+
+Please generate 5 ranked retrieval queries as a JSON array."""
     
     response = client.chat(system_msg, user_message)
     queries = extract_json_from_response(response)
@@ -157,14 +150,13 @@ def generate_outline(
     """Generate outline with scenes."""
     logger.info(f"Generating outline for {scenes_count} scenes...")
     
-    user_message = fill_template_variables(
-        prompt_template,
-        {
-            "topic": topic,
-            "length_seconds": length_seconds,
-            "scenes_count": scenes_count
-        }
-    )
+    user_message = f"""{prompt_template}
+
+Video Topic: {topic}
+Target Duration: {length_seconds} seconds
+Number of Scenes: {scenes_count}
+
+Please generate exactly {scenes_count} scenes as a JSON array."""
     
     response = client.chat(system_msg, user_message)
     scenes = extract_json_from_response(response)
@@ -186,15 +178,32 @@ def generate_script_with_citations(
     """Generate script with citations for a scene."""
     logger.info(f"Generating script for scene {scene['id']}: {scene['title']}")
     
-    docs_json = json.dumps(retrieved_docs)
-    user_message = fill_template_variables(
-        prompt_template,
-        {
-            "scene": json.dumps(scene),
-            "retrieved_docs": docs_json,
-            "estimated_seconds": scene.get("estimated_seconds", 10)
-        }
-    )
+    estimated_seconds = scene.get("estimated_seconds", 10)
+    
+    # Format scene info as readable text
+    scene_info = f"""Scene Details:
+- ID: {scene.get('id', 'N/A')}
+- Title: {scene.get('title', 'N/A')}
+- Purpose: {scene.get('purpose', 'N/A')}
+- Estimated Duration: {estimated_seconds} seconds"""
+    
+    # Format retrieved docs as readable list
+    if retrieved_docs:
+        docs_info = "\n\nRetrieved Documents:\n"
+        for i, doc in enumerate(retrieved_docs, 1):
+            docs_info += f"{i}. Title: {doc.get('title', 'N/A')}\n"
+            docs_info += f"   URL: {doc.get('url', 'N/A')}\n"
+            docs_info += f"   Excerpt: {doc.get('excerpt', 'N/A')}\n"
+    else:
+        docs_info = "\n\nRetrieved Documents: None provided"
+    
+    # Build user message with template + scene/docs info
+    user_message = f"""{prompt_template}
+
+{scene_info}
+{docs_info}
+
+Please generate the narration JSON now."""
     
     response = client.chat(system_msg, user_message)
     script_data = extract_json_from_response(response)
@@ -224,13 +233,27 @@ def fact_check_claims(
             claim["note"] = "needs_source"
         return claims
     
-    user_message = fill_template_variables(
-        prompt_template,
-        {
-            "claims": json.dumps(claims),
-            "candidate_docs": json.dumps(candidate_docs)
-        }
-    )
+    # Format claims as readable list
+    claims_info = "Claims to verify:\n"
+    for claim in claims:
+        claim_id = claim.get("claim_id", "N/A")
+        text = claim.get("text", "N/A")
+        claims_info += f"- {claim_id}: {text}\n"
+    
+    # Format docs as readable list
+    docs_info = "\nCandidate Documents:\n"
+    for i, doc in enumerate(candidate_docs, 1):
+        docs_info += f"{i}. Title: {doc.get('title', 'N/A')}\n"
+        docs_info += f"   URL: {doc.get('url', 'N/A')}\n"
+        docs_info += f"   Excerpt: {doc.get('excerpt', 'N/A')}\n"
+    
+    # Build user message
+    user_message = f"""{prompt_template}
+
+{claims_info}
+{docs_info}
+
+Please verify each claim against the candidate documents and return the results as JSON."""
     
     response = client.chat(system_msg, user_message)
     checked_claims = extract_json_from_response(response)
@@ -252,14 +275,13 @@ def generate_ssml(
     """Generate SSML for scene narration."""
     logger.info(f"Generating SSML for scene {scene_id}...")
     
-    user_message = fill_template_variables(
-        prompt_template,
-        {
-            "scene_id": scene_id,
-            "narration": narration,
-            "estimated_seconds": estimated_seconds
-        }
-    )
+    user_message = f"""{prompt_template}
+
+Scene ID: {scene_id}
+Narration: {narration}
+Estimated Duration: {estimated_seconds} seconds
+
+Please generate the SSML output as JSON with 'ssml' and 'timings_hint' keys."""
     
     response = client.chat(system_msg, user_message)
     ssml_data = extract_json_from_response(response)
@@ -307,13 +329,14 @@ def orchestrate_pipeline(
     output_dir: Path,
     api_key: str,
     model: str,
-    prompts_dir: Path
+    prompts_dir: Path,
+    enable_reasoning: bool = False
 ) -> None:
     """Orchestrate the full video generation pipeline."""
     logger.info("Starting video generation pipeline...")
     
     # Initialize client and load system message
-    client = OpenRouterClient(api_key, model)
+    client = OpenRouterClient(api_key, model, enable_reasoning=enable_reasoning)
     system_msg = load_prompt_template("system", prompts_dir)
     
     # Step 1: Generate retrieval queries
@@ -456,13 +479,14 @@ def main() -> None:
     parser.add_argument("--retrieval-limit", type=int, default=5, help="Max docs per scene (default 5)")
     parser.add_argument("--retrieved-docs", help="Path to JSON file with retrieved documents")
     parser.add_argument("--output-dir", default="./output", help="Output directory (default: ./output)")
+    parser.add_argument("--enable-reasoning", action="store_true", help="Enable DeepSeek reasoning mode")
     
     args = parser.parse_args()
     
     # Load environment variables
     load_dotenv()
     api_key = os.getenv("OPENROUTER_API_KEY")
-    model = os.getenv("OPENROUTER_MODEL", "meta-llama/llama-3-8b-instruct")
+    model = os.getenv("OPENROUTER_MODEL", "deepseek/deepseek-v4-flash")
     
     if not api_key:
         logger.error("OPENROUTER_API_KEY environment variable not set")
@@ -487,7 +511,8 @@ def main() -> None:
             output_dir=Path(args.output_dir),
             api_key=api_key,
             model=model,
-            prompts_dir=prompts_dir
+            prompts_dir=prompts_dir,
+            enable_reasoning=args.enable_reasoning
         )
     except Exception as e:
         logger.error(f"Pipeline failed: {e}", exc_info=True)

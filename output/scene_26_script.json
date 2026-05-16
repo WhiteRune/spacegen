@@ -1,0 +1,39 @@
+{
+  "id": 26,
+  "title": "Neutron stars can have a maximum mass of about 2.2 solar masses.",
+  "purpose": "Discuss the upper mass limit (Tolman-Oppenheimer-Volkoff limit).",
+  "estimated_seconds": 20,
+  "keywords": [
+    "maximum mass",
+    "TOV limit"
+  ],
+  "narration": "What determines the maximum mass of a neutron star? Astronomers call this the Tolman-Oppenheimer-Volkoff limit, and it's roughly 2.2 times the mass of our Sun. This boundary separates stable neutron stars from collapse into a black hole. Let's explore why this limit is so important.",
+  "ssml": "<speak>What determines the maximum mass of a neutron star? <break time=\"300ms\"/> Astronomers call this the Tolman-Oppenheimer-Volkoff limit, and it's roughly <emphasis level=\"moderate\">2.2</emphasis> times the mass of our Sun. <break time=\"500ms\"/> This boundary separates stable neutron stars from collapse into a black hole. <break time=\"300ms\"/> Let's explore why this limit is so important.</speak>",
+  "timings_hint": [
+    3,
+    8,
+    5,
+    4
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "c26_1",
+      "text": "The Tolman-Oppenheimer-Volkoff limit is about 2.2 solar masses.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c26_2",
+      "text": "This limit separates stable neutron stars from collapse into a black hole.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

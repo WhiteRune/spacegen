@@ -1,0 +1,37 @@
+{
+  "id": 23,
+  "title": "Neutron star mergers are observed via gravitational waves and light.",
+  "purpose": "Introduce multi-messenger astronomy.",
+  "estimated_seconds": 20,
+  "keywords": [
+    "merger",
+    "gravitational waves"
+  ],
+  "narration": "When two neutron stars collide in a distant galaxy, they send out ripples in spacetime called gravitational waves\u2014and a brilliant flash of light. This extraordinary event, known as a kilonova, opens a new window for astronomers to study the cosmos using multiple messengers at once.",
+  "ssml": "<speak>When two neutron stars collide in a distant galaxy, they send out ripples in spacetime called gravitational waves\u2014and a brilliant flash of light.<break time=\"500ms\"/> This extraordinary event, known as a kilonova, opens a new window for astronomers to study the cosmos using multiple messengers at once.</speak>",
+  "timings_hint": [
+    10.5,
+    9.0
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "claim_23_1",
+      "text": "When two neutron stars collide, they produce both gravitational waves and a flash of light.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "claim_23_2",
+      "text": "A neutron star merger is called a kilonova and allows astronomers to observe the universe using multiple messengers.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

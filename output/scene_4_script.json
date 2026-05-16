@@ -1,0 +1,47 @@
+{
+  "id": 4,
+  "title": "Protons and electrons combine to form neutrons.",
+  "purpose": "Explain the change in particle composition during collapse.",
+  "estimated_seconds": 20,
+  "keywords": [
+    "neutrons",
+    "electron capture"
+  ],
+  "narration": "In the final moments of a massive star's life, protons and electrons merge to form neutrons. This transformation, known as electron capture, reduces the number of electrons and releases neutrinos. The change in particle composition triggers the collapse of the core, leading to a supernova explosion.",
+  "ssml": "<speak>In the final moments of a massive star's life, protons and electrons merge to form neutrons.<break time=\"300ms\"/>This transformation, known as electron capture, reduces the number of electrons and releases neutrinos.<break time=\"300ms\"/>The change in particle composition triggers the collapse of the core, leading to a supernova explosion.</speak>",
+  "timings_hint": [
+    7,
+    8,
+    5
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "In the final moments of a massive star's life, protons and electrons merge to form neutrons.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c2",
+      "text": "This transformation, known as electron capture, reduces the number of electrons and releases neutrinos.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c3",
+      "text": "The change in particle composition triggers the collapse of the core, leading to a supernova explosion.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": 21,
+  "title": "The first binary pulsar was discovered by Hulse and Taylor.",
+  "purpose": "Give credit and historical milestone.",
+  "estimated_seconds": 15,
+  "keywords": [
+    "Hulse-Taylor",
+    "binary pulsar"
+  ],
+  "narration": "The first binary pulsar was discovered by Hulse and Taylor.",
+  "ssml": "<speak>The <emphasis level=\"moderate\">first</emphasis> binary pulsar was discovered by Hulse and Taylor.</speak>",
+  "timings_hint": [
+    15
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "The first binary pulsar was discovered by Hulse and Taylor.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

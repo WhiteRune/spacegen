@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "title": "Neutron stars are among the densest objects in the universe.",
+    "purpose": "Hook viewers with an astonishing fact about neutron stars.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "neutron stars",
+      "density"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "They form when massive stars explode as supernovae.",
+    "purpose": "Explain the basic formation process of neutron stars.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "formation",
+      "supernova"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "The core of the star collapses under gravity.",
+    "purpose": "Describe the collapse that leads to a neutron star.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "core collapse",
+      "gravity"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Protons and electrons combine to form neutrons.",
+    "purpose": "Explain the change in particle composition during collapse.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "neutrons",
+      "electron capture"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "A neutron star is about 20 km in diameter but has more mass than the Sun.",
+    "purpose": "Give a sense of scale and extreme density.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "size",
+      "mass"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "One teaspoon of neutron star material weighs billions of tons.",
+    "purpose": "Illustrate density with a relatable comparison.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "density",
+      "teaspoon"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Neutron stars spin incredibly fast, up to hundreds of times per second.",
+    "purpose": "Introduce rapid rotation as a key characteristic.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "rotation",
+      "spin rate"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Their magnetic fields are trillions of times stronger than Earth's.",
+    "purpose": "Highlight extreme magnetic fields.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "magnetic field",
+      "intensity"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Some neutron stars emit beams of radiation from their magnetic poles.",
+    "purpose": "Set up the concept of pulsars.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "radiation beams",
+      "magnetic poles"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "These are called pulsars, and we see them as regular pulses.",
+    "purpose": "Define pulsars and their observational signature.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "pulsar",
+      "pulses"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Pulsars act like cosmic lighthouses.",
+    "purpose": "Use an analogy to explain pulsar beam geometry.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "lighthouse",
+      "analogy"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "The first pulsar was discovered in 1967 by Jocelyn Bell Burnell.",
+    "purpose": "Provide historical context and credit to a key scientist.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "discovery",
+      "Jocelyn Bell Burnell"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Neutron stars have intense gravity, bending spacetime around them.",
+    "purpose": "Introduce general relativistic effects.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "gravity",
+      "spacetime"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Their surface gravity is about 2\u00d710\u00b9\u00b9 times Earth's.",
+    "purpose": "Quantify the extreme gravity.",
+    "estimated_seconds": 10,
+    "keywords": [
+      "surface gravity",
+      "comparison"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Inside, matter is crushed into a superfluid and superconducting state.",
+    "purpose": "Describe the exotic interior of neutron stars.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "superfluid",
+      "superconductor"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "The crust is made of a lattice of atomic nuclei and free electrons.",
+    "purpose": "Explain the outermost layer composition.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "crust",
+      "atomic nuclei"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Some neutron stars have extremely strong magnetic fields called magnetars.",
+    "purpose": "Introduce magnetars as a subtype.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "magnetar",
+      "magnetic field"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Magnetars can have starquakes that release huge bursts of gamma rays.",
+    "purpose": "Describe the activity of magnetars.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "starquake",
+      "gamma-ray burst"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Neutron stars can be found in binary systems.",
+    "purpose": "Explain that neutron stars often have companions.",
+    "estimated_seconds": 10,
+    "keywords": [
+      "binary system",
+      "companion"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Some binary pulsars allow tests of general relativity.",
+    "purpose": "Highlight their use as natural laboratories.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "binary pulsar",
+      "general relativity"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "The first binary pulsar was discovered by Hulse and Taylor.",
+    "purpose": "Give credit and historical milestone.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "Hulse-Taylor",
+      "binary pulsar"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Orbital decay in that system matched predictions of gravitational waves.",
+    "purpose": "Explain indirect evidence for gravitational waves.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "orbital decay",
+      "gravitational waves"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Neutron star mergers are observed via gravitational waves and light.",
+    "purpose": "Introduce multi-messenger astronomy.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "merger",
+      "gravitational waves"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "The 2017 event GW170817 was a neutron star merger seen in both ways.",
+    "purpose": "Provide a concrete example of multi-messenger detection.",
+    "estimated_seconds": 25,
+    "keywords": [
+      "GW170817",
+      "multi-messenger"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Mergers produce heavy elements like gold and platinum.",
+    "purpose": "Explain nucleosynthesis in neutron star collisions.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "heavy elements",
+      "nucleosynthesis"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Neutron stars can have a maximum mass of about 2.2 solar masses.",
+    "purpose": "Discuss the upper mass limit (Tolman-Oppenheimer-Volkoff limit).",
+    "estimated_seconds": 20,
+    "keywords": [
+      "maximum mass",
+      "TOV limit"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Above that limit, they collapse into black holes.",
+    "purpose": "Explain the fate of too-massive neutron stars.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "black hole",
+      "collapse"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Neutron stars are studied using X-ray and gamma-ray telescopes.",
+    "purpose": "Describe observational methods.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "X-ray telescope",
+      "gamma-ray telescope"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "The NICER telescope on the ISS measures neutron star sizes precisely.",
+    "purpose": "Highlight a specific mission and its results.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "NICER",
+      "size measurement"
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Some neutron stars are isolated, while others are in clusters.",
+    "purpose": "Note diversity in environments.",
+    "estimated_seconds": 10,
+    "keywords": [
+      "isolated",
+      "cluster"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "The fastest-spinning pulsar rotates over 700 times per second.",
+    "purpose": "Provide a record-breaking fact.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "fastest pulsar",
+      "spin rate"
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Pulsar timing arrays use many pulsars to detect gravitational waves.",
+    "purpose": "Introduce current research directions.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "pulsar timing array",
+      "gravitational waves"
+    ]
+  },
+  {
+    "id": 33,
+    "title": "The equation of state of neutron star matter is still uncertain.",
+    "purpose": "Mention open questions in physics.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "equation of state",
+      "uncertainty"
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Observations help constrain the equation of state.",
+    "purpose": "Explain how data improves models.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "constraints",
+      "observations"
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Chandra and XMM-Newton have observed neutron star spectra.",
+    "purpose": "Name specific space telescopes and their role.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "Chandra",
+      "XMM-Newton"
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Neutron stars can cool by emitting neutrinos from their interior.",
+    "purpose": "Describe cooling mechanisms.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "cooling",
+      "neutrinos"
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Some neutron stars exhibit glitches\u2014sudden spin-ups.",
+    "purpose": "Introduce a fascinating phenomenon.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "glitch",
+      "spin-up"
+    ]
+  },
+  {
+    "id": 38,
+    "title": "Glitches are thought to be caused by superfluid vortex motion.",
+    "purpose": "Explain the leading theory for glitches.",
+    "estimated_seconds": 20,
+    "keywords": [
+      "superfluid",
+      "vortices"
+    ]
+  },
+  {
+    "id": 39,
+    "title": "Neutron stars are crucial for understanding extreme physics.",
+    "purpose": "Summarize their importance to fundamental science.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "extreme physics",
+      "fundamental"
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Future missions like ATHENA will reveal more about neutron stars.",
+    "purpose": "End with a forward-looking statement and excitement.",
+    "estimated_seconds": 15,
+    "keywords": [
+      "ATHENA",
+      "future"
+    ]
+  }
+]

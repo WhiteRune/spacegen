@@ -1,0 +1,47 @@
+{
+  "id": 3,
+  "title": "The core of the star collapses under gravity.",
+  "purpose": "Describe the collapse that leads to a neutron star.",
+  "estimated_seconds": 15,
+  "keywords": [
+    "core collapse",
+    "gravity"
+  ],
+  "narration": "The core's own gravity becomes unstoppable, crushing it down. Protons and electrons merge into neutrons, releasing a flood of neutrinos. The collapse halts only when nuclear forces push back, creating an ultra-dense neutron star.",
+  "ssml": "<speak>The core's own gravity becomes unstoppable, crushing it down.<break time=\"300ms\"/>Protons and electrons merge into neutrons, releasing a flood of neutrinos.<break time=\"300ms\"/>The collapse halts only when nuclear forces push back, creating an ultra-dense neutron star.</speak>",
+  "timings_hint": [
+    4.2,
+    4.7,
+    6.1
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "The core's own gravity becomes unstoppable, crushing it down.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c2",
+      "text": "Protons and electrons merge into neutrons, releasing a flood of neutrinos.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c3",
+      "text": "The collapse halts only when nuclear forces push back, creating an ultra-dense neutron star.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}

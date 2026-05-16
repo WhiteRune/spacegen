@@ -1,0 +1,2048 @@
+{
+  "video_package": {
+    "topic": "neutron stars",
+    "length_seconds": 600,
+    "scenes_count": 40,
+    "scenes": [
+      {
+        "id": 1,
+        "title": "Neutron stars are among the densest objects in the universe.",
+        "purpose": "Hook viewers with an astonishing fact about neutron stars.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "neutron stars",
+          "density"
+        ],
+        "narration": "Did you know that neutron stars are among the densest objects in the universe? This mind-boggling fact will change how you see the cosmos.",
+        "ssml": "<speak>Did you know that neutron stars are among the densest objects in the universe?<break time=\"500ms\"/>This mind-boggling fact will change how you see the cosmos.</speak>",
+        "timings_hint": [
+          9,
+          6
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Neutron stars are among the densest objects in the universe.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "They form when massive stars explode as supernovae.",
+        "purpose": "Explain the basic formation process of neutron stars.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "formation",
+          "supernova"
+        ],
+        "narration": "Neutron stars form when massive stars explode as supernovae. During the explosion, the core collapses into an incredibly dense ball of neutrons. This creates an object just a few kilometers wide but with more mass than our Sun.",
+        "ssml": "<speak>Neutron stars form when massive stars explode as supernovae.<break time=\"300ms\"/> During the explosion, the core collapses into an incredibly dense ball of neutrons.<break time=\"300ms\"/> This creates an object just a few kilometers wide but with more mass than our Sun.</speak>",
+        "timings_hint": [
+          5,
+          7,
+          8
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c2-1",
+            "text": "Neutron stars form when massive stars explode as supernovae.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2-2",
+            "text": "During the explosion, the core collapses into an incredibly dense ball of neutrons.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2-3",
+            "text": "This creates an object just a few kilometers wide but with more mass than our Sun.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "The core of the star collapses under gravity.",
+        "purpose": "Describe the collapse that leads to a neutron star.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "core collapse",
+          "gravity"
+        ],
+        "narration": "The core's own gravity becomes unstoppable, crushing it down. Protons and electrons merge into neutrons, releasing a flood of neutrinos. The collapse halts only when nuclear forces push back, creating an ultra-dense neutron star.",
+        "ssml": "<speak>The core's own gravity becomes unstoppable, crushing it down.<break time=\"300ms\"/>Protons and electrons merge into neutrons, releasing a flood of neutrinos.<break time=\"300ms\"/>The collapse halts only when nuclear forces push back, creating an ultra-dense neutron star.</speak>",
+        "timings_hint": [
+          4.2,
+          4.7,
+          6.1
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "The core's own gravity becomes unstoppable, crushing it down.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "Protons and electrons merge into neutrons, releasing a flood of neutrinos.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "The collapse halts only when nuclear forces push back, creating an ultra-dense neutron star.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Protons and electrons combine to form neutrons.",
+        "purpose": "Explain the change in particle composition during collapse.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "neutrons",
+          "electron capture"
+        ],
+        "narration": "In the final moments of a massive star's life, protons and electrons merge to form neutrons. This transformation, known as electron capture, reduces the number of electrons and releases neutrinos. The change in particle composition triggers the collapse of the core, leading to a supernova explosion.",
+        "ssml": "<speak>In the final moments of a massive star's life, protons and electrons merge to form neutrons.<break time=\"300ms\"/>This transformation, known as electron capture, reduces the number of electrons and releases neutrinos.<break time=\"300ms\"/>The change in particle composition triggers the collapse of the core, leading to a supernova explosion.</speak>",
+        "timings_hint": [
+          7,
+          8,
+          5
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "In the final moments of a massive star's life, protons and electrons merge to form neutrons.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "This transformation, known as electron capture, reduces the number of electrons and releases neutrinos.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "The change in particle composition triggers the collapse of the core, leading to a supernova explosion.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "A neutron star is about 20 km in diameter but has more mass than the Sun.",
+        "purpose": "Give a sense of scale and extreme density.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "size",
+          "mass"
+        ],
+        "narration": "A neutron star packs more mass than our Sun into a sphere just twenty kilometers across. That makes it incredibly dense, with material compressed to densities far beyond anything on Earth.",
+        "ssml": "<speak>A neutron star packs more mass than our Sun into a sphere just <emphasis level=\"moderate\">twenty</emphasis> kilometers across.<break time=\"300ms\"/>That makes it incredibly dense, with material compressed to densities far beyond anything on Earth.</speak>",
+        "timings_hint": [
+          6.4,
+          6.0
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "5-1",
+            "text": "A neutron star is about 20 km in diameter but has more mass than the Sun.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "5-2",
+            "text": "Neutron stars have extremely high density, compressing matter beyond Earth-normal conditions.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "One teaspoon of neutron star material weighs billions of tons.",
+        "purpose": "Illustrate density with a relatable comparison.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "density",
+          "teaspoon"
+        ],
+        "narration": "Imagine a single teaspoon. Now imagine it filled with material from a neutron star. That tiny spoonful would weigh billions of tons, heavier than all of humanity combined. That's the incredible density of a neutron star.",
+        "ssml": "<speak>Imagine a single teaspoon.<break time=\"300ms\"/> Now imagine it filled with material from a neutron star.<break time=\"300ms\"/> That tiny spoonful would weigh <emphasis level=\"moderate\">billions</emphasis> of <emphasis level=\"moderate\">tons</emphasis>, heavier than all of humanity combined.<break time=\"300ms\"/> That's the incredible density of a neutron star.</speak>",
+        "timings_hint": [
+          2.5,
+          3.5,
+          5.5,
+          3.5
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "6-1",
+            "text": "A teaspoon of neutron star material weighs billions of tons.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "6-2",
+            "text": "That tiny spoonful would be heavier than all of humanity combined.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "6-3",
+            "text": "Neutron stars have incredible density.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Neutron stars spin incredibly fast, up to hundreds of times per second.",
+        "purpose": "Introduce rapid rotation as a key characteristic.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "rotation",
+          "spin rate"
+        ],
+        "narration": "Neutron stars are the fastest spinning objects in the universe. They can rotate hundreds of times per second. This incredible speed comes from the collapse of a massive star's core. The spin is a key characteristic of these exotic objects.",
+        "ssml": "<speak>Neutron stars are the fastest spinning objects in the universe.<break time=\"300ms\"/>They can rotate <emphasis level=\"moderate\">hundreds</emphasis> of times per second.<break time=\"300ms\"/>This incredible speed comes from the collapse of a massive star's core.<break time=\"300ms\"/>The spin is a key characteristic of these exotic objects.</speak>",
+        "timings_hint": [
+          3.64,
+          3.18,
+          4.09,
+          4.09
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Neutron stars are the fastest spinning objects in the universe.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "They can rotate hundreds of times per second.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "This incredible speed comes from the collapse of a massive star's core.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c4",
+            "text": "The spin is a key characteristic of these exotic objects.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Their magnetic fields are trillions of times stronger than Earth's.",
+        "purpose": "Highlight extreme magnetic fields.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "magnetic field",
+          "intensity"
+        ],
+        "narration": "These are the universe's ultimate magnets. Their magnetic fields are trillions of times stronger than Earth's, so powerful they can rip atoms to shreds. They warp spacetime and trap particles in beams of pure energy. It's a force beyond comprehension.",
+        "ssml": "<speak>These are the universe's ultimate magnets. <break time=\"300ms\"/>Their magnetic fields are <emphasis level=\"moderate\">trillions</emphasis> of times stronger than Earth's, so powerful they can rip atoms to shreds. <break time=\"300ms\"/>They warp spacetime and trap particles in beams of pure energy. <break time=\"300ms\"/>It's a force beyond comprehension.</speak>",
+        "timings_hint": [
+          3,
+          5,
+          4,
+          3
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "scene8_claim1",
+            "text": "Their magnetic fields are trillions of times stronger than Earth's.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Some neutron stars emit beams of radiation from their magnetic poles.",
+        "purpose": "Set up the concept of pulsars.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "radiation beams",
+          "magnetic poles"
+        ],
+        "narration": "Some neutron stars spin incredibly fast and have powerful magnetic fields. These fields funnel particles into beams that shoot from the magnetic poles. As the star rotates, the beams sweep across space like a lighthouse. When a beam points toward Earth, we detect a pulse of radiation. That's what we call a pulsar.",
+        "ssml": "<speak>Some neutron stars spin incredibly fast and have powerful magnetic fields.<break time=\"300ms\"/>These fields funnel particles into beams that shoot from the magnetic poles.<break time=\"300ms\"/>As the star rotates, the beams sweep across space like a lighthouse.<break time=\"300ms\"/>When a beam points toward Earth, we detect a pulse of radiation.<break time=\"300ms\"/>That's what we call a pulsar.</speak>",
+        "timings_hint": [
+          4.68,
+          4.26,
+          4.26,
+          4.26,
+          2.55
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "9_1",
+            "text": "Some neutron stars spin incredibly fast and have powerful magnetic fields.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "9_2",
+            "text": "These fields funnel particles into beams that shoot from the magnetic poles.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "9_3",
+            "text": "As the star rotates, the beams sweep across space like a lighthouse.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "9_4",
+            "text": "When a beam points toward Earth, we detect a pulse of radiation.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "9_5",
+            "text": "That's what we call a pulsar.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "These are called pulsars, and we see them as regular pulses.",
+        "purpose": "Define pulsars and their observational signature.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "pulsar",
+          "pulses"
+        ],
+        "narration": "These are called pulsars, and we see them as regular pulses. They act like cosmic lighthouses, emitting beams that appear to pulse as the star rotates.",
+        "ssml": "<speak>These are called pulsars, and we see them as regular pulses.<break time=\"300ms\"/>They act like cosmic lighthouses, emitting beams that appear to pulse as the star rotates.</speak>",
+        "timings_hint": [
+          4.4,
+          6.0
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "These are called pulsars, and we see them as regular pulses.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "They act like cosmic lighthouses, emitting beams that appear to pulse as the star rotates.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Pulsars act like cosmic lighthouses.",
+        "purpose": "Use an analogy to explain pulsar beam geometry.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "lighthouse",
+          "analogy"
+        ],
+        "narration": "Pulsars act like cosmic lighthouses. As they rotate, narrow beams of radiation sweep past Earth, producing regular pulses of light.",
+        "ssml": "<speak>Pulsars act like cosmic lighthouses.<break time=\"500ms\"/>As they rotate, narrow beams of radiation sweep past Earth, producing regular pulses of light.</speak>",
+        "timings_hint": [
+          4,
+          11
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Pulsars act like cosmic lighthouses.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "As they rotate, narrow beams of radiation sweep past Earth.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "This produces regular pulses of light.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "The first pulsar was discovered in 1967 by Jocelyn Bell Burnell.",
+        "purpose": "Provide historical context and credit to a key scientist.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "discovery",
+          "Jocelyn Bell Burnell"
+        ],
+        "narration": "The first pulsar was discovered in 1967 by Jocelyn Bell Burnell, a pivotal moment in astronomy.",
+        "ssml": "<speak>The first pulsar was discovered in <emphasis level=\"moderate\">1967</emphasis> by Jocelyn Bell Burnell, a pivotal moment in astronomy.</speak>",
+        "timings_hint": [
+          20
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "The first pulsar was discovered in 1967 by Jocelyn Bell Burnell.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Neutron stars have intense gravity, bending spacetime around them.",
+        "purpose": "Introduce general relativistic effects.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "gravity",
+          "spacetime"
+        ],
+        "narration": "Neutron stars are incredibly dense, packing a sun's mass into a city-sized sphere. Their powerful gravity warps spacetime, causing light to curve and time to slow down. This demonstrates the effects of general relativity in the universe's most extreme environments.",
+        "ssml": "<speak>Neutron stars are incredibly dense, packing a sun's mass into a city-sized sphere.<break time=\"300ms\"/> Their powerful gravity warps spacetime, causing light to curve and time to slow down.<break time=\"300ms\"/> This demonstrates the effects of general relativity in the universe's most extreme environments.</speak>",
+        "timings_hint": [
+          7,
+          7,
+          6
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "claim-13-1",
+            "text": "Neutron stars are incredibly dense, packing a sun's mass into a city-sized sphere.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "claim-13-2",
+            "text": "Their powerful gravity warps spacetime, causing light to curve and time to slow down.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "claim-13-3",
+            "text": "This demonstrates the effects of general relativity in the universe's most extreme environments.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Their surface gravity is about 2\u00d710\u00b9\u00b9 times Earth's.",
+        "purpose": "Quantify the extreme gravity.",
+        "estimated_seconds": 10,
+        "keywords": [
+          "surface gravity",
+          "comparison"
+        ],
+        "narration": "Their surface gravity is roughly 200 billion times stronger than Earth's. To put that in perspective, you would be crushed instantly.",
+        "ssml": "<speak>Their surface gravity is roughly <emphasis level=\"moderate\">200 billion</emphasis> times stronger than Earth's.<break time=\"300ms\"/>To put that in perspective, you would be crushed instantly.</speak>",
+        "timings_hint": [
+          5.5,
+          4.5
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c14_1",
+            "text": "Their surface gravity is roughly 200 billion times stronger than Earth's.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c14_2",
+            "text": "To put that in perspective, you would be crushed instantly.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title": "Inside, matter is crushed into a superfluid and superconducting state.",
+        "purpose": "Describe the exotic interior of neutron stars.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "superfluid",
+          "superconductor"
+        ],
+        "narration": "Inside a neutron star, matter is crushed into a superfluid of neutrons and a superconducting state of protons. This exotic material has zero viscosity and zero electrical resistance, allowing electric currents to flow forever.",
+        "ssml": "<speak>Inside a neutron star, matter is crushed into a superfluid of neutrons and a superconducting state of protons.<break time=\"300ms\"/>This exotic material has <emphasis level=\"moderate\">zero</emphasis> viscosity and <emphasis level=\"moderate\">zero</emphasis> electrical resistance, allowing electric currents to flow forever.</speak>",
+        "timings_hint": [
+          7,
+          7
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Inside a neutron star, matter is crushed into a superfluid of neutrons and a superconducting state of protons.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "This exotic material has zero viscosity and zero electrical resistance, allowing electric currents to flow forever.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "title": "The crust is made of a lattice of atomic nuclei and free electrons.",
+        "purpose": "Explain the outermost layer composition.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "crust",
+          "atomic nuclei"
+        ],
+        "narration": "The crust of a neutron star consists of a lattice of atomic nuclei. It is immersed in a sea of free electrons. This forms the outermost layer. Its composition is crucial for understanding neutron star physics.",
+        "ssml": "<speak>The crust of a neutron star consists of a lattice of atomic nuclei.<break time=\"300ms\"/>It is immersed in a sea of free electrons.<break time=\"300ms\"/>This forms the outermost layer.<break time=\"300ms\"/>Its composition is crucial for understanding neutron star physics.</speak>",
+        "timings_hint": [
+          4.4,
+          3.6,
+          2.0,
+          3.6
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "16-1",
+            "text": "The crust of a neutron star consists of a lattice of atomic nuclei.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "16-2",
+            "text": "It is immersed in a sea of free electrons.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "16-3",
+            "text": "This forms the outermost layer.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "16-4",
+            "text": "Its composition is crucial for understanding neutron star physics.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "title": "Some neutron stars have extremely strong magnetic fields called magnetars.",
+        "purpose": "Introduce magnetars as a subtype.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "magnetar",
+          "magnetic field"
+        ],
+        "narration": "Among the many types of neutron stars, there is a special class called magnetars, which have magnetic fields thousands of times stronger than typical neutron stars. They are truly cosmic powerhouses.",
+        "ssml": "<speak><prosody rate=\"medium\">Among the many types of neutron stars, there is a special class called magnetars, which have magnetic fields <emphasis level=\"moderate\">thousands</emphasis> of times stronger than typical neutron stars.<break time=\"500ms\"/> They are truly cosmic powerhouses.</prosody></speak>",
+        "timings_hint": [
+          12.4,
+          2.6
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c17_1",
+            "text": "Among the many types of neutron stars, there is a special class called magnetars.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c17_2",
+            "text": "Magnetars have magnetic fields thousands of times stronger than typical neutron stars.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c17_3",
+            "text": "Magnetars are truly cosmic powerhouses.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "title": "Magnetars can have starquakes that release huge bursts of gamma rays.",
+        "purpose": "Describe the activity of magnetars.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "starquake",
+          "gamma-ray burst"
+        ],
+        "narration": "Magnetars are neutron stars with ultra-strong magnetic fields. They can undergo starquakes, which are violent crust fractures. These events release powerful gamma-ray bursts. This scene describes that activity.",
+        "ssml": "<speak>Magnetars are neutron stars with ultra-strong magnetic fields.<break time=\"300ms\"/>They can undergo starquakes, which are violent crust fractures.<break time=\"300ms\"/>These events release powerful gamma-ray bursts.<break time=\"300ms\"/>This scene describes that activity.</speak>",
+        "timings_hint": [
+          5.73,
+          6.37,
+          3.82,
+          3.18
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "1",
+            "text": "Magnetars are neutron stars with ultra-strong magnetic fields.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "2",
+            "text": "They can undergo starquakes, which are violent crust fractures.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "3",
+            "text": "These events release powerful gamma-ray bursts.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "title": "Neutron stars can be found in binary systems.",
+        "purpose": "Explain that neutron stars often have companions.",
+        "estimated_seconds": 10,
+        "keywords": [
+          "binary system",
+          "companion"
+        ],
+        "narration": "Neutron stars often have companion stars, forming binary systems. These pairs provide unique insights into extreme physics.",
+        "ssml": "<speak>Neutron stars often have companion stars, forming binary systems.<break time=\"300ms\"/>These pairs provide unique insights into extreme physics.</speak>",
+        "timings_hint": [
+          5.33,
+          4.67
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Neutron stars often have companion stars, forming binary systems.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "These pairs provide unique insights into extreme physics.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "title": "Some binary pulsars allow tests of general relativity.",
+        "purpose": "Highlight their use as natural laboratories.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "binary pulsar",
+          "general relativity"
+        ],
+        "narration": "Binary pulsars serve as cosmic laboratories for testing general relativity under extreme conditions. Scientists use their stable radio pulses to measure effects like gravitational waves and time dilation. These systems provide some of the strictest tests of Einstein's theory, confirming predictions with remarkable accuracy.",
+        "ssml": "<speak>Binary pulsars serve as cosmic laboratories for testing general relativity under extreme conditions.<break time=\"300ms\"/>Scientists use their stable radio pulses to measure effects like gravitational waves and time dilation.<break time=\"300ms\"/>These systems provide some of the strictest tests of Einstein's theory, confirming predictions with remarkable accuracy.</speak>",
+        "timings_hint": [
+          5.7,
+          6.2,
+          7.5
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "claim-1",
+            "text": "Binary pulsars serve as cosmic laboratories for testing general relativity under extreme conditions.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "claim-2",
+            "text": "Scientists use their stable radio pulses to measure effects like gravitational waves and time dilation.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "claim-3",
+            "text": "These systems provide some of the strictest tests of Einstein's theory, confirming predictions with remarkable accuracy.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "title": "The first binary pulsar was discovered by Hulse and Taylor.",
+        "purpose": "Give credit and historical milestone.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "Hulse-Taylor",
+          "binary pulsar"
+        ],
+        "narration": "The first binary pulsar was discovered by Hulse and Taylor.",
+        "ssml": "<speak>The <emphasis level=\"moderate\">first</emphasis> binary pulsar was discovered by Hulse and Taylor.</speak>",
+        "timings_hint": [
+          15
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "The first binary pulsar was discovered by Hulse and Taylor.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "title": "Orbital decay in that system matched predictions of gravitational waves.",
+        "purpose": "Explain indirect evidence for gravitational waves.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "orbital decay",
+          "gravitational waves"
+        ],
+        "narration": "In a binary system of two neutron stars, their orbital decay precisely matched the predictions of general relativity for gravitational wave emission. This was strong indirect evidence for gravitational waves before direct detection.",
+        "ssml": "<speak>In a binary system of two neutron stars, their orbital decay precisely matched the predictions of general relativity for gravitational wave emission.<break time=\"500ms\"/>This was strong indirect evidence for gravitational waves before direct detection.</speak>",
+        "timings_hint": [
+          12,
+          8
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "22-claim-1",
+            "text": "Orbital decay in a binary neutron star system precisely matched predictions of general relativity for gravitational wave emission.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "22-claim-2",
+            "text": "This orbital decay provided strong indirect evidence for gravitational waves before direct detection.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "title": "Neutron star mergers are observed via gravitational waves and light.",
+        "purpose": "Introduce multi-messenger astronomy.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "merger",
+          "gravitational waves"
+        ],
+        "narration": "When two neutron stars collide in a distant galaxy, they send out ripples in spacetime called gravitational waves\u2014and a brilliant flash of light. This extraordinary event, known as a kilonova, opens a new window for astronomers to study the cosmos using multiple messengers at once.",
+        "ssml": "<speak>When two neutron stars collide in a distant galaxy, they send out ripples in spacetime called gravitational waves\u2014and a brilliant flash of light.<break time=\"500ms\"/> This extraordinary event, known as a kilonova, opens a new window for astronomers to study the cosmos using multiple messengers at once.</speak>",
+        "timings_hint": [
+          10.5,
+          9.0
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "claim_23_1",
+            "text": "When two neutron stars collide, they produce both gravitational waves and a flash of light.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "claim_23_2",
+            "text": "A neutron star merger is called a kilonova and allows astronomers to observe the universe using multiple messengers.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "title": "The 2017 event GW170817 was a neutron star merger seen in both ways.",
+        "purpose": "Provide a concrete example of multi-messenger detection.",
+        "estimated_seconds": 25,
+        "keywords": [
+          "GW170817",
+          "multi-messenger"
+        ],
+        "narration": "In 2017, astronomers detected GW170817, a neutron star merger. This event was special because it was observed by both gravitational wave detectors and traditional telescopes. This multi-messenger observation confirmed the origin of short gamma-ray bursts and taught us about heavy element formation. For the first time, scientists saw both the gravitational ripples and the light from a cosmic collision, launching the era of multi-messenger astronomy.",
+        "ssml": "<speak>In <emphasis level=\"moderate\">2017</emphasis>, astronomers detected GW170817, a neutron star merger.<break time=\"300ms\"/> This event was special because it was observed by both gravitational wave detectors and traditional telescopes.<break time=\"300ms\"/> This multi-messenger observation confirmed the origin of short gamma-ray bursts and taught us about heavy element formation.<break time=\"300ms\"/> For the first time, scientists saw both the gravitational ripples and the light from a cosmic collision, launching the era of multi-messenger astronomy.</speak>",
+        "timings_hint": [
+          4,
+          6,
+          6,
+          8
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "24-1",
+            "text": "In 2017, astronomers detected GW170817, a neutron star merger.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "24-2",
+            "text": "This event was observed by both gravitational wave detectors and traditional telescopes.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "24-3",
+            "text": "This multi-messenger observation confirmed the origin of short gamma-ray bursts.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "24-4",
+            "text": "This event taught us about heavy element formation.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "24-5",
+            "text": "For the first time, scientists saw both gravitational ripples and light from a cosmic collision.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "24-6",
+            "text": "This event launched the era of multi-messenger astronomy.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "title": "Mergers produce heavy elements like gold and platinum.",
+        "purpose": "Explain nucleosynthesis in neutron star collisions.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "heavy elements",
+          "nucleosynthesis"
+        ],
+        "narration": "Deep in the universe, when two neutron stars merge, they create extreme conditions that forge the heaviest elements, including gold and platinum. This process, called nucleosynthesis, is responsible for the presence of these precious metals throughout the cosmos.",
+        "ssml": "<speak>Deep in the universe, when <emphasis level=\"moderate\">two</emphasis> neutron stars merge, they create extreme conditions that forge the heaviest elements, including gold and platinum.<break time=\"500ms\"/> This process, called nucleosynthesis, is responsible for the presence of these precious metals throughout the cosmos.</speak>",
+        "timings_hint": [
+          11.8,
+          7.7
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c25_1",
+            "text": "When two neutron stars merge, they create extreme conditions that forge the heaviest elements.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c25_2",
+            "text": "These cosmic collisions produce gold and platinum.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c25_3",
+            "text": "This process is called nucleosynthesis and is responsible for the presence of these elements throughout the cosmos.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "title": "Neutron stars can have a maximum mass of about 2.2 solar masses.",
+        "purpose": "Discuss the upper mass limit (Tolman-Oppenheimer-Volkoff limit).",
+        "estimated_seconds": 20,
+        "keywords": [
+          "maximum mass",
+          "TOV limit"
+        ],
+        "narration": "What determines the maximum mass of a neutron star? Astronomers call this the Tolman-Oppenheimer-Volkoff limit, and it's roughly 2.2 times the mass of our Sun. This boundary separates stable neutron stars from collapse into a black hole. Let's explore why this limit is so important.",
+        "ssml": "<speak>What determines the maximum mass of a neutron star? <break time=\"300ms\"/> Astronomers call this the Tolman-Oppenheimer-Volkoff limit, and it's roughly <emphasis level=\"moderate\">2.2</emphasis> times the mass of our Sun. <break time=\"500ms\"/> This boundary separates stable neutron stars from collapse into a black hole. <break time=\"300ms\"/> Let's explore why this limit is so important.</speak>",
+        "timings_hint": [
+          3,
+          8,
+          5,
+          4
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c26_1",
+            "text": "The Tolman-Oppenheimer-Volkoff limit is about 2.2 solar masses.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c26_2",
+            "text": "This limit separates stable neutron stars from collapse into a black hole.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "title": "Above that limit, they collapse into black holes.",
+        "purpose": "Explain the fate of too-massive neutron stars.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "black hole",
+          "collapse"
+        ],
+        "narration": "Neutron stars are incredibly dense. If they exceed a certain mass limit, they cannot support themselves and collapse into a black hole. That limit is called the Tolman-Oppenheimer-Volkoff limit.",
+        "ssml": "<speak>Neutron stars are incredibly dense.<break time=\"300ms\"/> If they exceed a certain mass limit, they cannot support themselves and collapse into a black hole.<break time=\"300ms\"/> That limit is called the Tolman-Oppenheimer-Volkoff limit.</speak>",
+        "timings_hint": [
+          2.5,
+          6.5,
+          6.0
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Neutron stars are incredibly dense.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "If they exceed a certain mass limit, they cannot support themselves and collapse into a black hole.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "That limit is called the Tolman-Oppenheimer-Volkoff limit.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "title": "Neutron stars are studied using X-ray and gamma-ray telescopes.",
+        "purpose": "Describe observational methods.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "X-ray telescope",
+          "gamma-ray telescope"
+        ],
+        "narration": "Neutron stars are studied using X-ray and gamma-ray telescopes.",
+        "ssml": "<speak>Neutron stars are studied using X-ray and gamma-ray telescopes.</speak>",
+        "timings_hint": [
+          15
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Neutron stars are studied using X-ray and gamma-ray telescopes.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "title": "The NICER telescope on the ISS measures neutron star sizes precisely.",
+        "purpose": "Highlight a specific mission and its results.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "NICER",
+          "size measurement"
+        ],
+        "narration": "Did you know that the NICER telescope on the International Space Station measures the sizes of neutron stars with incredible precision? By observing X-ray pulses from their surfaces, it reveals how matter behaves under extreme density and pressure. This data helps scientists uncover the fundamental nature of matter itself.",
+        "ssml": "<speak>Did you know that the NICER telescope on the International Space Station measures the sizes of neutron stars with incredible precision?<break time=\"500ms\"/>By observing X-ray pulses from their surfaces, it reveals how matter behaves under extreme density and pressure.<break time=\"300ms\"/>This data helps scientists uncover the fundamental nature of matter itself.</speak>",
+        "timings_hint": [
+          8.4,
+          6.8,
+          4.4
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "The NICER telescope aboard the ISS measures neutron star sizes precisely.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "It works by observing X-ray pulses from neutron star surfaces.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "The measurements help understand matter under extreme density and pressure.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "title": "Some neutron stars are isolated, while others are in clusters.",
+        "purpose": "Note diversity in environments.",
+        "estimated_seconds": 10,
+        "keywords": [
+          "isolated",
+          "cluster"
+        ],
+        "narration": "Neutron stars can be found in different environments. Some are isolated, drifting alone through space. Others belong to clusters, interacting with companion stars. This diversity shapes their evolution.",
+        "ssml": "<speak>Neutron stars can be found in different environments.<break time=\"300ms\"/>Some are isolated, drifting alone through space.<break time=\"300ms\"/>Others belong to clusters, interacting with companion stars.<break time=\"300ms\"/>This diversity shapes their evolution.</speak>",
+        "timings_hint": [
+          2.2,
+          2.5,
+          2.8,
+          1.6
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Neutron stars can be found in different environments.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "Some neutron stars are isolated, drifting alone through space.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "Others belong to clusters, interacting with companion stars.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c4",
+            "text": "This diversity shapes their evolution.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "title": "The fastest-spinning pulsar rotates over 700 times per second.",
+        "purpose": "Provide a record-breaking fact.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "fastest pulsar",
+          "spin rate"
+        ],
+        "narration": "Did you know the fastest-spinning pulsar rotates over 700 times per second? That's more than seven hundred spins in the time it takes you to blink! This extreme speed makes it one of the most fascinating objects in the universe.",
+        "ssml": "<speak>Did you know the fastest-spinning pulsar rotates over <emphasis level=\"moderate\">700</emphasis> times per second?<break time=\"300ms\"/>That's more than <emphasis level=\"moderate\">seven hundred</emphasis> spins in the time it takes you to blink!<break time=\"300ms\"/>This extreme speed makes it one of the most fascinating objects in the universe.</speak>",
+        "timings_hint": [
+          5,
+          5,
+          5
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "The fastest-spinning pulsar rotates over 700 times per second.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "That's more than seven hundred spins in the time it takes you to blink.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "This extreme speed makes it one of the most fascinating objects in the universe.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "title": "Pulsar timing arrays use many pulsars to detect gravitational waves.",
+        "purpose": "Introduce current research directions.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "pulsar timing array",
+          "gravitational waves"
+        ],
+        "narration": "Gravitational wave research has expanded beyond ground-based detectors. Pulsar timing arrays now use many pulsars across the galaxy to create a huge gravitational wave observatory. By timing these cosmic clocks precisely, scientists hope to detect very low frequency ripples in spacetime. This technique promises to open a new window on the universe.",
+        "ssml": "<speak>Gravitational wave research has expanded beyond ground-based detectors.<break time=\"300ms\"/>Pulsar timing arrays now use many pulsars across the galaxy to create a huge gravitational wave observatory.<break time=\"300ms\"/>By timing these cosmic clocks precisely, scientists hope to detect very low frequency ripples in spacetime.<break time=\"300ms\"/>This technique promises to open a new window on the universe.</speak>",
+        "timings_hint": [
+          3,
+          5,
+          4,
+          3
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Gravitational wave research has expanded beyond ground-based detectors.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "Pulsar timing arrays now use many pulsars across the galaxy to create a huge gravitational wave observatory.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "By timing these cosmic clocks precisely, scientists hope to detect very low frequency ripples in spacetime.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c4",
+            "text": "This technique promises to open a new window on the universe.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "title": "The equation of state of neutron star matter is still uncertain.",
+        "purpose": "Mention open questions in physics.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "equation of state",
+          "uncertainty"
+        ],
+        "narration": "The equation of state of neutron star matter remains one of the biggest open questions in astrophysics. It challenges our understanding of matter at extreme densities, and scientists are still working to pin it down.",
+        "ssml": "<speak>The equation of state of neutron star matter remains one of the biggest open questions in astrophysics.<break time=\"500ms\"/> It challenges our understanding of matter at extreme densities, and scientists are still working to pin it down.</speak>",
+        "timings_hint": [
+          8,
+          7
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c33-1",
+            "text": "The equation of state of neutron star matter remains one of the biggest open questions in astrophysics.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c33-2",
+            "text": "It challenges our understanding of matter at extreme densities.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c33-3",
+            "text": "Scientists are still working to pin it down.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "title": "Observations help constrain the equation of state.",
+        "purpose": "Explain how data improves models.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "constraints",
+          "observations"
+        ],
+        "narration": "Astronomical observations, such as those from gravitational waves and X-ray telescopes, allow scientists to test and improve the equation of state. By comparing observed properties to model predictions, we can constrain the behavior of matter at extreme densities.",
+        "ssml": "<speak>Astronomical observations, such as those from gravitational waves and X-ray telescopes, allow scientists to test and improve the equation of state.<break time=\"300ms\"/>By comparing observed properties to model predictions, we can constrain the behavior of matter at extreme densities.</speak>",
+        "timings_hint": [
+          8,
+          7
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Astronomical observations allow scientists to test and improve the equation of state.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "By comparing observed properties to model predictions, we can constrain the behavior of matter at extreme densities.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "title": "Chandra and XMM-Newton have observed neutron star spectra.",
+        "purpose": "Name specific space telescopes and their role.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "Chandra",
+          "XMM-Newton"
+        ],
+        "narration": "Two powerful space telescopes, NASA's Chandra X-ray Observatory and ESA's XMM-Newton, have both observed the unique spectra of neutron stars, helping us understand their extreme environments.",
+        "ssml": "<speak><emphasis level=\"moderate\">Two</emphasis> powerful space telescopes, NASA's Chandra X-ray Observatory and ESA's XMM-Newton, have both observed the unique spectra of neutron stars, helping us understand their extreme environments.</speak>",
+        "timings_hint": [
+          15
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c35-1",
+            "text": "Two powerful space telescopes, NASA's Chandra X-ray Observatory and ESA's XMM-Newton, have both observed the unique spectra of neutron stars.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c35-2",
+            "text": "These observations help us understand the extreme environments of neutron stars.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "title": "Neutron stars can cool by emitting neutrinos from their interior.",
+        "purpose": "Describe cooling mechanisms.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "cooling",
+          "neutrinos"
+        ],
+        "narration": "Deep inside a neutron star, extreme heat generates neutrinos that escape, carrying away energy and cooling the star over time.",
+        "ssml": "<speak>Deep inside a neutron star, extreme heat generates neutrinos that escape, carrying away energy and cooling the star over time.</speak>",
+        "timings_hint": [
+          15
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "36-1",
+            "text": "Neutron stars cool by emitting neutrinos from their interior.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "title": "Some neutron stars exhibit glitches\u2014sudden spin-ups.",
+        "purpose": "Introduce a fascinating phenomenon.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "glitch",
+          "spin-up"
+        ],
+        "narration": "Some neutron stars exhibit glitches\u2014sudden spin-ups. Astronomers call these events glitches. These sudden spin-ups are one of the most intriguing behaviors in the cosmos. In this scene, we'll introduce you to this phenomenon, setting the stage for a deeper dive into what causes them and what they reveal about the nature of dense matter.",
+        "ssml": "<speak>Some neutron stars exhibit glitches\u2014sudden spin-ups.<break time=\"300ms\"/>Astronomers call these events glitches.<break time=\"300ms\"/>These sudden spin-ups are <emphasis level=\"moderate\">one</emphasis> of the most intriguing behaviors in the cosmos.<break time=\"300ms\"/>In this scene, we'll introduce you to this phenomenon, setting the stage for a deeper dive into what causes them and what they reveal about the nature of dense matter.</speak>",
+        "timings_hint": [
+          3,
+          2,
+          5,
+          10
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "claim_37_1",
+            "text": "Some neutron stars exhibit glitches\u2014sudden spin-ups.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "claim_37_2",
+            "text": "Astronomers call these events glitches.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "title": "Glitches are thought to be caused by superfluid vortex motion.",
+        "purpose": "Explain the leading theory for glitches.",
+        "estimated_seconds": 20,
+        "keywords": [
+          "superfluid",
+          "vortices"
+        ],
+        "narration": "Pulsar glitches are sudden increases in rotation speed. The leading theory suggests they are caused by the motion of superfluid vortices inside the neutron star. When these vortices become unpinned, they transfer angular momentum outward, speeding up the star's crust. This model is widely accepted but still being refined.",
+        "ssml": "<speak>Pulsar glitches are sudden increases in rotation speed.<break time=\"300ms\"/>The leading theory suggests they are caused by the motion of superfluid vortices inside the neutron star.<break time=\"300ms\"/>When these vortices become unpinned, they transfer angular momentum outward, speeding up the star's crust.<break time=\"300ms\"/>This model is widely accepted but still being refined.</speak>",
+        "timings_hint": [
+          3.2,
+          6.8,
+          7.2,
+          3.2
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "38-1",
+            "text": "Pulsar glitches are sudden increases in rotation speed.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "38-2",
+            "text": "The leading theory suggests glitches are caused by the motion of superfluid vortices inside the neutron star.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "38-3",
+            "text": "When these vortices become unpinned, they transfer angular momentum outward, speeding up the star's crust.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "38-4",
+            "text": "This model is widely accepted but still being refined.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "title": "Neutron stars are crucial for understanding extreme physics.",
+        "purpose": "Summarize their importance to fundamental science.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "extreme physics",
+          "fundamental"
+        ],
+        "narration": "Neutron stars are cosmic laboratories for extreme physics. Their immense gravity and density allow scientists to test the limits of our understanding. This makes them vital for fundamental science. By studying neutron stars, researchers gain insights into the behavior of matter under conditions impossible to recreate on Earth.",
+        "ssml": "<speak>Neutron stars are cosmic laboratories for extreme physics.<break time=\"300ms\"/>Their immense gravity and density allow scientists to test the limits of our understanding.<break time=\"300ms\"/>This makes them vital for fundamental science.<break time=\"300ms\"/>By studying neutron stars, researchers gain insights into the behavior of matter under conditions impossible to recreate on Earth.</speak>",
+        "timings_hint": [
+          2.4,
+          4.5,
+          2.1,
+          6.0
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "Neutron stars are cosmic laboratories for extreme physics.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c2",
+            "text": "Their immense gravity and density allow scientists to test the limits of our understanding.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c3",
+            "text": "This makes them vital for fundamental science.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          },
+          {
+            "claim_id": "c4",
+            "text": "By studying neutron stars, researchers gain insights into the behavior of matter under conditions impossible to recreate on Earth.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "title": "Future missions like ATHENA will reveal more about neutron stars.",
+        "purpose": "End with a forward-looking statement and excitement.",
+        "estimated_seconds": 15,
+        "keywords": [
+          "ATHENA",
+          "future"
+        ],
+        "narration": "The future looks bright for neutron star research. Missions like ATHENA will peer into the most extreme environments in the universe, revealing secrets of matter under unimaginable pressure. Stay tuned\u2014the best discoveries are yet to come!",
+        "ssml": "<speak>The future looks bright for neutron star research.<break time=\"300ms\"/>Missions like ATHENA will peer into the most extreme environments in the universe, revealing secrets of matter under unimaginable pressure.<break time=\"500ms\"/>Stay tuned\u2014the best discoveries are yet to come!</speak>",
+        "timings_hint": [
+          3.0,
+          8.14,
+          3.86
+        ],
+        "citations": [],
+        "claims": [
+          {
+            "claim_id": "40-1",
+            "text": "Future missions like ATHENA will reveal more about neutron stars.",
+            "source_doc_id": null,
+            "confidence": 0,
+            "note": "needs_source",
+            "supported": "false",
+            "best_source_url": null
+          }
+        ]
+      }
+    ]
+  },
+  "orchestration_log": {
+    "topic": "neutron stars",
+    "length_seconds": 600,
+    "scenes_count": 40,
+    "global_queries": [
+      "neutron star equation of state observational data",
+      "neutron stars NASA",
+      "neutron star ESA",
+      "neutron star review Annual Reviews",
+      "neutron stars Science News"
+    ],
+    "scenes": [
+      {
+        "scene_id": 1,
+        "retrieved_doc_count": 0,
+        "total_claims": 1,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 1
+      },
+      {
+        "scene_id": 2,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 3,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 4,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 5,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 6,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 7,
+        "retrieved_doc_count": 0,
+        "total_claims": 4,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 4
+      },
+      {
+        "scene_id": 8,
+        "retrieved_doc_count": 0,
+        "total_claims": 1,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 1
+      },
+      {
+        "scene_id": 9,
+        "retrieved_doc_count": 0,
+        "total_claims": 5,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 5
+      },
+      {
+        "scene_id": 10,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 11,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 12,
+        "retrieved_doc_count": 0,
+        "total_claims": 1,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 1
+      },
+      {
+        "scene_id": 13,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 14,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 15,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 16,
+        "retrieved_doc_count": 0,
+        "total_claims": 4,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 4
+      },
+      {
+        "scene_id": 17,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 18,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 19,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 20,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 21,
+        "retrieved_doc_count": 0,
+        "total_claims": 1,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 1
+      },
+      {
+        "scene_id": 22,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 23,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 24,
+        "retrieved_doc_count": 0,
+        "total_claims": 6,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 6
+      },
+      {
+        "scene_id": 25,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 26,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 27,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 28,
+        "retrieved_doc_count": 0,
+        "total_claims": 1,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 1
+      },
+      {
+        "scene_id": 29,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 30,
+        "retrieved_doc_count": 0,
+        "total_claims": 4,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 4
+      },
+      {
+        "scene_id": 31,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 32,
+        "retrieved_doc_count": 0,
+        "total_claims": 4,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 4
+      },
+      {
+        "scene_id": 33,
+        "retrieved_doc_count": 0,
+        "total_claims": 3,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 3
+      },
+      {
+        "scene_id": 34,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 35,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 36,
+        "retrieved_doc_count": 0,
+        "total_claims": 1,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 1
+      },
+      {
+        "scene_id": 37,
+        "retrieved_doc_count": 0,
+        "total_claims": 2,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 2
+      },
+      {
+        "scene_id": 38,
+        "retrieved_doc_count": 0,
+        "total_claims": 4,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 4
+      },
+      {
+        "scene_id": 39,
+        "retrieved_doc_count": 0,
+        "total_claims": 4,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 4
+      },
+      {
+        "scene_id": 40,
+        "retrieved_doc_count": 0,
+        "total_claims": 1,
+        "claims_supported_count": 0,
+        "claims_needing_source_count": 1
+      }
+    ]
+  }
+}

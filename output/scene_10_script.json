@@ -1,0 +1,37 @@
+{
+  "id": 10,
+  "title": "These are called pulsars, and we see them as regular pulses.",
+  "purpose": "Define pulsars and their observational signature.",
+  "estimated_seconds": 15,
+  "keywords": [
+    "pulsar",
+    "pulses"
+  ],
+  "narration": "These are called pulsars, and we see them as regular pulses. They act like cosmic lighthouses, emitting beams that appear to pulse as the star rotates.",
+  "ssml": "<speak>These are called pulsars, and we see them as regular pulses.<break time=\"300ms\"/>They act like cosmic lighthouses, emitting beams that appear to pulse as the star rotates.</speak>",
+  "timings_hint": [
+    4.4,
+    6.0
+  ],
+  "citations": [],
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "These are called pulsars, and we see them as regular pulses.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    },
+    {
+      "claim_id": "c2",
+      "text": "They act like cosmic lighthouses, emitting beams that appear to pulse as the star rotates.",
+      "source_doc_id": null,
+      "confidence": 0,
+      "note": "needs_source",
+      "supported": "false",
+      "best_source_url": null
+    }
+  ]
+}
