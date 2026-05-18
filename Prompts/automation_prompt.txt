@@ -1,7 +1,11 @@
+#file:generate_video_package.py
+#workspace
+
 Task: Orchestrate the video-generation pipeline using the prompt templates.
+Integration Context: Acts as a high-level agent prompt or pipeline orchestrator overview. The Python framework leverages `OpenRouterClient` in `shared_utils.py` and strictly extracts JSON via `extract_json_from_response()`.
 
 Goal:
-You will act as a pipeline orchestrator for generating an English-language short educational video package JSON. Use the prompt templates in this project (outline, script_with_citations, retrieval_queries, fact_checker, ssml_generator). Respond only with the final JSON video package described in the schema. Do not output any additional commentary.
+You will act as a pipeline orchestrator for generating an English-language short educational video package JSON. Use the prompt templates in this project (outline, script_with_citations, retrieval_queries, fact_checker, ssml_generator). Respond only with the final JSON video package exactly as expected by `generate_video_package.py`. Do not output any additional commentary.
 
 Inputs you will receive from caller (single JSON):
 - topic (string)
@@ -10,25 +14,17 @@ Inputs you will receive from caller (single JSON):
 - retrieval_limit (int, optional, default 5)
 
 Pipeline steps (you must follow these precisely):
-1) Produce 5 retrieval queries for the overall topic using the retrieval_queries template. Return them in a field "global_queries" in the orchestration log.
-2) Call the Outline step: use the outline prompt to create exactly {scenes_count} scenes. Each scene must include keywords used for retrieval.
+1) Produce 5 retrieval queries using the `retrieval_queries` template. Return them in "global_queries" in the orchestration_log.
+2) Call the Outline step: use the `outline` prompt to create exactly {scenes_count} scenes. 
 3) For each scene in order:
-   a) Use the scene keywords and the "global_queries" to fetch up to {retrieval_limit} documents (caller provides documents). If caller does not provide documents, return scene with empty citations and mark claims as needs_source.
-   b) Call the Script step with the provided docs to generate narration, citations and claim list.
-   c) Call the Fact-checker step: verify each claim against the provided docs and update claim.supported and confidence.
-   d) Call the SSML generator to produce SSML and timings_hint.
-4) Aggregate all scenes into the final video_package JSON following the project's video schema.
-5) Provide an "orchestration_log" object that records for each scene: retrieved_doc_count, total_claims, claims_supported_count, claims_needing_source_count.
+   a) Fetch up to {retrieval_limit} documents. If none, return scene with empty citations, claims marked needs_source.
+   b) Script step: generate narration, citations and claim list (JSON).
+   c) Fact-checker step: verify claims against docs and update supported/confidence.
+   d) SSML step: produce SSML and timings_hint.
+4) Aggregate scenes into `video_package` JSON structure.
+5) Provide an "orchestration_log" object (retrieved_doc_count, total_claims, claims_supported_count, claims_needing_source_count).
 
 Important constraints:
-- Do not hallucinate sources. Use only provided retrieved docs for support.
-- If a claim lacks support in provided docs, set claim confidence to 0 and set source_url to null, note "needs_source".
-- Return only one JSON object: the final video package with an additional top-level "orchestration_log".
-
-Output schema (top-level):
-{ "video_package": { ...video schema here... }, "orchestration_log": {...} }
-
-Example caller invocation (do not include in answer):
-{ "topic":"neutron stars", "length_seconds":60, "scenes_count":4 }
-
-When ready, wait for the caller to supply retrieved documents and any runtime inputs.
+- Do not hallucinate sources.
+- Strict JSON output required (no Markdown wrapping outside of the block) for robust python `json.loads` parsing.
+- Output schema (top-level): { "video_package": { ... }, "orchestration_log": {...} }

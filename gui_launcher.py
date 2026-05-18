@@ -13,9 +13,10 @@ import shutil
 from pathlib import Path
 import threading
 
-# Fix encoding for Windows console
-if sys.platform == "win32":
-    sys.stdout.reconfigure(encoding='utf-8')
+from shared_utils import setup_environment, get_audio_duration, format_duration
+
+# Initialize environment
+setup_environment()
 
 
 class VideoGeneratorGUI:
@@ -125,7 +126,13 @@ class VideoGeneratorGUI:
         ttk.Label(main_frame, text="Voice:", font=("Arial", 10, "bold")).grid(row=14, column=0, sticky=tk.W, pady=5)
         self.voice_var = tk.StringVar(value="Charon")
         voice_combo = ttk.Combobox(main_frame, textvariable=self.voice_var, 
-                                   values=["Charon", "Aoede", "Ember", "Lira", "Orion", "Sage"],
+                                   values=["Zephyr", "Puck", "Charon", "Kore", "Fenrir", "Leda", 
+                                          "Orus", "Aoede", "Callirrhoe", "Autonoe", "Enceladus", 
+                                          "Iapetus", "Umbriel", "Algieba", "Despina", "Erinome", 
+                                          "Algenib", "Rasalgethi", "Laomedeia", "Achernar", 
+                                          "Alnilam", "Schedar", "Gacrux", "Pulcherrima", "Achird", 
+                                          "Zubenelgenubi", "Vindemiatrix", "Sadachbia", 
+                                          "Sadaltager", "Sulafat"],
                                    state="readonly", width=20)
         voice_combo.grid(row=14, column=1, sticky=tk.W, pady=5)
         
@@ -135,11 +142,19 @@ class VideoGeneratorGUI:
         speed_spinbox = ttk.Spinbox(main_frame, from_=0.5, to=2.0, increment=0.1, textvariable=self.speed_var, width=10)
         speed_spinbox.grid(row=15, column=1, sticky=tk.W, pady=5)
         
+        # Narrator prompt selection
+        ttk.Label(main_frame, text="Narrator Prompt:", font=("Arial", 10, "bold")).grid(row=16, column=0, sticky=tk.W, pady=5)
+        self.narrator_prompt_var = tk.StringVar(value="None")
+        narrator_combo = ttk.Combobox(main_frame, textvariable=self.narrator_prompt_var,
+                                     values=["None", "Educational", "Technical", "Motivational"],
+                                     state="readonly", width=20)
+        narrator_combo.grid(row=16, column=1, sticky=tk.W, pady=5)
+        
         # Voice output directory
-        ttk.Label(main_frame, text="Voice Output Dir:", font=("Arial", 10, "bold")).grid(row=16, column=0, sticky=tk.W, pady=5)
+        ttk.Label(main_frame, text="Voice Output Dir:", font=("Arial", 10, "bold")).grid(row=17, column=0, sticky=tk.W, pady=5)
         self.voice_output_var = tk.StringVar(value="./output/voice_over")
         voice_output_frame = ttk.Frame(main_frame)
-        voice_output_frame.grid(row=16, column=1, columnspan=2, sticky=(tk.W, tk.E), pady=5)
+        voice_output_frame.grid(row=17, column=1, columnspan=2, sticky=(tk.W, tk.E), pady=5)
         voice_output_entry = ttk.Entry(voice_output_frame, textvariable=self.voice_output_var, width=30)
         voice_output_entry.pack(side=tk.LEFT, fill=tk.X, expand=True)
         voice_output_button = ttk.Button(voice_output_frame, text="Browse", command=self.browse_voice_output)
@@ -147,7 +162,7 @@ class VideoGeneratorGUI:
         
         # Generate voice button
         voice_button_frame = ttk.Frame(main_frame)
-        voice_button_frame.grid(row=17, column=0, columnspan=3, pady=10, sticky=(tk.W, tk.E))
+        voice_button_frame.grid(row=18, column=0, columnspan=3, pady=10, sticky=(tk.W, tk.E))
         
         self.generate_voice_button = ttk.Button(voice_button_frame, text="🎙️ Generate Voice Over", command=self.generate_voice)
         self.generate_voice_button.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 3))
@@ -159,15 +174,15 @@ class VideoGeneratorGUI:
         summary_button.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(3, 0))
         
         # Status text area
-        ttk.Label(main_frame, text="Status:", font=("Arial", 10, "bold")).grid(row=18, column=0, sticky=tk.W, pady=(10, 5))
+        ttk.Label(main_frame, text="Status:", font=("Arial", 10, "bold")).grid(row=19, column=0, sticky=tk.W, pady=(10, 5))
         self.status_text = scrolledtext.ScrolledText(main_frame, height=15, width=70, state=tk.DISABLED)
-        self.status_text.grid(row=19, column=0, columnspan=3, sticky=(tk.W, tk.E, tk.N, tk.S), pady=5)
+        self.status_text.grid(row=20, column=0, columnspan=3, sticky=(tk.W, tk.E, tk.N, tk.S), pady=5)
         
         # Configure grid weights
         root.columnconfigure(0, weight=1)
         root.rowconfigure(0, weight=1)
         main_frame.columnconfigure(1, weight=1)
-        main_frame.rowconfigure(19, weight=1)
+        main_frame.rowconfigure(20, weight=1)
     
     def log(self, message: str):
         """Add message to status text area."""
@@ -383,10 +398,12 @@ class VideoGeneratorGUI:
             voice = self.voice_var.get()
             speed = self.speed_var.get()
             voice_output_dir = self.voice_output_var.get().strip()
+            narrator_prompt = self.narrator_prompt_var.get()
             
             self.log(f"Narration File: {narration_file}")
             self.log(f"Voice: {voice}")
             self.log(f"Speed: {speed}")
+            self.log(f"Narrator Prompt: {narrator_prompt}")
             self.log(f"Output Dir: {voice_output_dir}")
             self.log("")
             self.log("-" * 70)
@@ -400,6 +417,17 @@ class VideoGeneratorGUI:
                 "--voice", voice,
                 "--speed", str(speed)
             ]
+            
+            # Add narrator prompt if selected
+            if narrator_prompt != "None":
+                prompt_file_map = {
+                    "Educational": "./Prompts/narrator_prompt_educational.txt",
+                    "Technical": "./Prompts/narrator_prompt_technical.txt",
+                    "Motivational": "./Prompts/narrator_prompt_motivational.txt"
+                }
+                prompt_file = prompt_file_map.get(narrator_prompt)
+                if prompt_file and Path(prompt_file).exists():
+                    cmd.extend(["--narrator-prompt", prompt_file])
             
             self.log("Running command:")
             self.log(" ".join(cmd))
@@ -465,44 +493,11 @@ class VideoGeneratorGUI:
     
     def get_audio_duration(self, file_path: str) -> float:
         """Get duration of an audio file in seconds using ffprobe."""
-        ffprobe_path = shutil.which("ffprobe")
-        
-        if not ffprobe_path:
-            return 0.0
-        
-        try:
-            result = subprocess.run(
-                [
-                    ffprobe_path,
-                    "-v", "error",
-                    "-show_entries", "format=duration",
-                    "-of", "default=noprint_wrappers=1:nokey=1:nokey=1",
-                    file_path
-                ],
-                capture_output=True,
-                text=True,
-                timeout=5
-            )
-            
-            if result.stdout.strip():
-                return float(result.stdout.strip())
-        except Exception:
-            pass
-        
-        return 0.0
+        return get_audio_duration(file_path)
     
     def format_duration(self, seconds: float) -> str:
         """Format duration in seconds to HH:MM:SS format."""
-        hours = int(seconds // 3600)
-        minutes = int((seconds % 3600) // 60)
-        secs = int(seconds % 60)
-        
-        if hours > 0:
-            return f"{hours}h {minutes}m {secs}s"
-        elif minutes > 0:
-            return f"{minutes}m {secs}s"
-        else:
-            return f"{secs}s"
+        return format_duration(seconds)
     
     def show_voice_summary(self):
         """Display summary of generated voice files."""

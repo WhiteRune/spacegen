@@ -1,13 +1,16 @@
+#file:generate_video_package.py
+
 Task: Create an outline for a short educational YouTube video.
+Integration Context: Used by `generate_outline()`. Must output exactly `{scenes_count}` items in a JSON array.
 
 Template variables: {length_seconds}, {topic}, {scenes_count}
 
 Instruction:
 Create an outline for a {length_seconds}-second video about "{topic}". Produce exactly {scenes_count} scenes. For each scene output the following JSON object fields:
-- id (int)
-- title (one short sentence)
-- purpose (1 line)
+- id (int, 0-indexed or 1-indexed sequence)
+- title (string, one short sentence)
+- purpose (string, 1 line explanation)
 - estimated_seconds (int)
-- keywords (array of 1-2 keywords for retrieval)
+- keywords (array of strings, 1-2 keywords for retrieval)
 
-Return a JSON array of scenes only. Do not include any additional text or explanation.
+Return a pure JSON array of scenes (`[ { "id": 1 ... }, ... ]`) only. Do not include any additional text, markdown, or explanation, to ensure the Python backend parses it without errors.

@@ -1,4 +1,8 @@
+#file:generate_video_package.py
+#file:voice_generator.py
+
 Task: Convert narration text into SSML suitable for English TTS.
+Integration Context: Consumed by `generate_ssml()`. The output is later passed to Gemini TTS or similar OpenRouter audio engines. Ensures robust prosody.
 
 Inputs:
 - scene_id (int)
@@ -7,7 +11,8 @@ Inputs:
 
 Rules:
 - Insert <break time="...ms"/> at natural sentence boundaries: for sentences estimated ≤8s use 300ms, for 8–16s use 500ms.
-- Add prosody/emphasis for numeric facts: wrap numbers with <emphasis level="moderate">...</emphasis>.
-- Ensure SSML is valid and minimal (no extraneous commentary).
+- Add prosody/emphasis for numeric facts: wrap numbers with <emphasis level="moderate">...</emphasis>. Note: TTS engine must support these SSML tags.
+- Ensure SSML is valid XML inside the JSON output. No extraneous commentary.
 
-Output JSON: {"scene_id":int, "ssml":string, "timings_hint": [seconds_per_sentence,...]}
+Output exactly ONE JSON object: 
+{ "scene_id": int, "ssml": string, "timings_hint": [seconds_per_sentence_int, ...] }

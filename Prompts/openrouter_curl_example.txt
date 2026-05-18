@@ -1,17 +1,22 @@
-OpenRouter curl example (replace placeholders):
+#file:shared_utils.py
+
+OpenRouter curl example & Pipeline Integration Reference:
+
+This is a demonstration of how `OpenRouterClient` in `shared_utils.py` interacts with the API under the hood using headers.
 
 curl -X POST "https://api.openrouter.ai/v1/chat/completions" \
   -H "Authorization: Bearer $OPENROUTER_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model":"anthropic/claude-2.1",
+    "model":"[from OPENROUTER_MODEL env var]",
     "messages":[
-      {"role":"system","content":"[paste system prompt from Prompts/system.txt]"},
-      {"role":"user","content":"[paste one of the user prompts from Prompts/*.txt with filled variables]"}
+      {"role":"system","content":"[loaded from Prompts/system.txt]"},
+      {"role":"user","content":"[loaded from Prompts/*.txt template, formatted with vars]"}
     ],
     "max_tokens":1000
+    // "extra_body": {"reasoning": {"enabled": true}} // If enable_reasoning flag is passed in CLI
   }'
 
-Notes:
-- Use the system prompt from Prompts/system.txt.
-- Provide only up to 5 retrieved documents in the user message when asking for scene-level scripts.
+Notes for context generation:
+- The pipeline securely streams outputs for TTS in `voice_generator.py`.
+- Keep API interactions aligned with exponential backoff capabilities detailed in `OpenRouterClient._call_api()`.

@@ -350,6 +350,210 @@ Edit `output/YOUTUBE_REFORMAT_TEMPLATE.txt` to see detailed examples and write y
 - Short sentences for pacing
 - End with clear engagement hook
 
+## Voice Generation with Gemini TTS
+
+Generate professional audio narration using Google's Gemini Text-to-Speech model via OpenRouter. The voice generation system supports 30 professional voices and advanced prompting for educational content.
+
+### Quick Start: Generate Voice Narration
+
+**Via GUI (Easiest):**
+```bash
+python gui_launcher.py
+```
+Then click "Generate Voice" button. Choose voice, set speed, and click generate.
+
+**Via Command Line:**
+```bash
+python voice_generator.py \
+    --narration ./output/narration_draft_youtube.txt \
+    --voice Charon \
+    --speed 1.0 \
+    --output-dir ./output/voice_over
+```
+
+**With Narrator Prompt (Advanced):**
+```bash
+python voice_generator.py \
+    --narration ./output/narration_draft_youtube.txt \
+    --narrator-prompt ./Prompts/narrator_prompt_educational.txt \
+    --voice Charon \
+    --speed 1.0
+```
+
+### Available Voices (30 Options)
+
+The system supports all 30 official Gemini TTS voices:
+
+**Bright & Energetic:** Zephyr, Puck, Autonoe, Iapetus
+**Breezy & Easy-going:** Aoede, Callirrhoe, Umbriel
+**Clear & Smooth:** Enceladus, Algieba, Despina, Erinome
+**Informative & Firm:** Charon (default), Kore, Orus, Rasalgethi, Alnilam
+**Excitable & Upbeat:** Fenrir, Laomedeia
+**Youthful & Gentle:** Leda, Vindemiatrix
+**Gravelly & Casual:** Algenib, Zubenelgenubi
+**Soft & Warm:** Achernar, Sulafat
+**Other Options:** Even (Schedar), Mature (Gacrux), Forward (Pulcherrima), Friendly (Achird), Lively (Sadachbia), Knowledgeable (Sadaltager)
+
+### Advanced: Narrator Prompts for Educational Content
+
+Three professional narrator prompts are provided, each optimized for different educational styles:
+
+1. **narrator_prompt_educational.txt** — General educational content (default)
+   - Balanced, engaging narrator with natural pacing
+   - Best for: Science, history, tutorials, how-to content
+
+2. **narrator_prompt_technical.txt** — Technical deep-dives
+   - Precise, authoritative, measured delivery
+   - Best for: Programming, advanced topics, professional content
+
+3. **narrator_prompt_motivational.txt** — Personal development & wellness
+   - Warm, inspiring, conversational tone
+   - Best for: Self-improvement, psychology, lifestyle education
+
+**Full Guide:** See [`NARRATOR_PROMPTS_GUIDE.md`](./NARRATOR_PROMPTS_GUIDE.md) for detailed usage, custom prompt creation, and audio tag reference.
+
+### Audio Tags for Enhanced Delivery
+
+Add inline tags to your narration to control delivery style:
+
+```text
+[excitedly] This is an amazing discovery!
+[thoughtfully] Let me explain this complex concept...
+[with emphasis] This is the key takeaway.
+[whispers] Here's a little-known fact...
+```
+
+**Common tags:** [excited], [serious], [whispers], [shouting], [thoughtfully], [sarcastically], [laughs], [sighs], [gasp]
+
+See NARRATOR_PROMPTS_GUIDE.md for complete audio tag reference.
+
+### Voice Generation Output
+
+Generated files are saved in `output/voice_over/` by default:
+- `001.pcm` through `NNN.pcm` — Raw PCM audio (intermediate)
+- `001.mp3` through `NNN.mp3` — Final MP3 files (one per sentence)
+- Summary display showing: total files, combined duration, output directory
+
+**How Narrator Prompts Are Applied:**
+
+When you select a narrator prompt (Educational, Technical, Motivational), it acts as the **base instruction** for audio generation:
+
+```
+narration_draft_youtube.txt (5 sentences)
+    ↓
+    ├─ Sentence 1 + Educational Prompt → 001.mp3 ✓
+    ├─ Sentence 2 + Educational Prompt → 002.mp3 ✓
+    ├─ Sentence 3 + Educational Prompt → 003.mp3 ✓
+    ├─ Sentence 4 + Educational Prompt → 004.mp3 ✓
+    └─ Sentence 5 + Educational Prompt → 005.mp3 ✓
+
+Result: 5 MP3s with consistent narrator voice, tone, and pacing
+```
+
+Each sentence uses the narrator prompt as its performance foundation, ensuring unified voice character across all generated audio.
+
+### Adjust Speech Speed
+
+Use the `--speed` parameter (0.5 to 2.0):
+- `0.5` = Half speed (clear, measured delivery)
+- `1.0` = Normal speed (default)
+- `1.5` = 1.5x faster (energetic, rapid)
+- `2.0` = Double speed (maximum energy)
+
+Example:
+```bash
+python voice_generator.py \
+    --narration ./output/narration_draft_youtube.txt \
+    --voice Puck \
+    --speed 1.2
+```
+
+### Workflow: Generation → Narration → Voice
+
+```
+1. Generate video package
+   python generate_video_package.py --topic "your topic" --length-seconds 60 --scenes-count 4
+
+2. Extract narration for TTS
+   python extract_narration.py --video-package output/video_package.json
+
+3. Generate voice narration
+   python voice_generator.py --narration output/narration_draft_youtube.txt --voice Charon
+
+4. Audio files ready!
+   output/voice_over/001.mp3 through NNN.mp3
+```
+
+Or use the GUI for all steps:
+```bash
+python gui_launcher.py
+```
+
+### Complete End-to-End Workflow Example
+
+**Creating a 60-second educational YouTube video with professional narration:**
+
+**Step 1: Generate Video Package**
+```bash
+python generate_video_package.py \
+    --topic "neutron stars" \
+    --length-seconds 60 \
+    --scenes-count 4 \
+    --output-dir ./neutron_stars
+```
+
+**Step 2: Extract Narration (YouTube Format)**
+```bash
+python extract_narration.py \
+    --video-package ./neutron_stars/video_package.json \
+    --youtube-output ./neutron_stars/narration_youtube.txt
+```
+
+**Step 3: Generate Professional Voice with Narrator Prompt**
+```bash
+python voice_generator.py \
+    --narration ./neutron_stars/narration_youtube.txt \
+    --narrator-prompt ./Prompts/narrator_prompt_educational.txt \
+    --voice Charon \
+    --speed 1.0 \
+    --output-dir ./neutron_stars/voice_over
+```
+
+**Result:**
+- `neutron_stars/voice_over/001.mp3` through `004.mp3` (one per sentence)
+- Each MP3 uses the Educational narrator prompt as base instruction
+- Consistent voice character and pacing throughout
+- Total audio duration automatically calculated
+
+**Or use the GUI for all steps (easiest):**
+```bash
+python gui_launcher.py
+```
+- Click "Generate Video Package"
+- Click "Extract Narration"
+- Select "Educational" in Narrator Prompt dropdown
+- Click "Generate Voice Over"
+
+---
+
+### Troubleshooting Voice Generation
+
+**Issue:** "Internal Server Error (500)" with retry
+- **Cause:** OpenRouter Gemini TTS service temporarily unavailable
+- **Solution:** Wait 15 seconds (auto-retry), then try again
+
+**Issue:** Audio quality is robotic
+- **Cause:** No narrator prompt applied
+- **Solution:** Use `--narrator-prompt` with appropriate prompt file
+
+**Issue:** MP3 conversion fails
+- **Cause:** ffmpeg not installed
+- **Solution:** Install ffmpeg: `choco install ffmpeg` (Windows) or `brew install ffmpeg` (Mac)
+
+**Issue:** Pacing too fast or slow
+- **Cause:** Speech speed parameter too high/low
+- **Solution:** Adjust `--speed` parameter (default 1.0)
+
 ## License
 
 Use as needed. Requires valid OpenRouter API key.

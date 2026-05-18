@@ -1,20 +1,22 @@
+#file:generate_video_package.py
+
 Task: Write narration for a single scene and attach sources.
+Integration Context: Called by `generate_script_with_citations()`. Extracts JSON into a dict, subsequently used to populate `final_scene` object. Output structure must perfectly match the schema.
 
 Inputs provided by caller:
 - scene object (id, title, purpose, estimated_seconds)
 - retrieved_docs: up to 5 documents, each with {url, title, short_excerpt}
-- approximate target_words_per_second (optional)
 
 Instruction:
-Given the scene object and the provided retrieved_docs, write an English narration for the scene that fits approximately {estimated_seconds} seconds (aim ~12–16 words per 5 seconds). Tone: friendly, authoritative, engaging. Use only the provided retrieved_docs as sources — do NOT use external knowledge unless explicitly allowed. For each factual sentence include an inline citation number like [1] that references the provided docs array (1-based index).
+Given the scene object and the provided retrieved_docs, write an English narration for the scene that fits approximately {estimated_seconds} seconds (aim ~12–16 words per 5 seconds). Tone: friendly, authoritative, engaging. Use only the provided retrieved_docs as sources — do NOT use external knowledge. For each factual sentence include an inline citation number like [1] referencing the docs array.
 
-Output JSON object with keys:
+Output exactly ONE JSON object with keys:
 - scene_id (int)
 - narration (string)
-- ssml_hint (string) — brief SSML suggestions for this scene
+- ssml_hint (string) — brief SSML suggestions
 - citations (array of objects {id:int, url:string, title:string, excerpt:string, confidence:float})
 - claims (array of objects {claim_id:string, text:string, source_doc_id:int|null, confidence:float, note:string})
 
 Rules:
-- Do NOT hallucinate sources. If a factual sentence cannot be supported by provided docs, set its claim confidence to 0 and source_doc_id to null with note "needs_source".
-- Keep narration clear and suitable for TTS (avoid long nested clauses).
+- Do NOT hallucinate sources. If unsupported, set confidence to 0, source_doc_id to null, note "needs_source".
+- Keep narration suitable for TTS generation in `voice_generator.py` (avoid convoluted clauses).

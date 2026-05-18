@@ -2,14 +2,30 @@
 """
 Voice generation from narration text using OpenRouter Gemini TTS API.
 
-Reads narration sentences from narration_draft_youtube.txt and generates
-audio files (MP3) with professional voice narration. Supports ffmpeg conversion
-from PCM to MP3 for better compatibility.
+Reads narration sentences from narration_draft_youtube.txt line by line and generates
+audio files (MP3) with professional voice narration. 
+
+NARRATOR PROMPTS:
+When a narrator prompt is provided via --narrator-prompt, it is applied as the
+base instruction/performance direction for EVERY sentence generated. The narrator
+prompt acts as the foundational performance guidance that ensures consistent voice
+character, tone, pacing, and style across all audio files.
+
+Available narrator prompts (following Gemini TTS official guide):
+- Educational: General educational content with balanced pacing and engagement
+- Technical: Technical deep-dives with precise, authoritative delivery
+- Motivational: Personal development with warm, inspiring tone
+
+Narrator prompts include:
+- Audio Profile: Character identity and archetype
+- Scene: Environmental context for consistent mood
+- Director's Notes: Specific performance guidance (style, pacing, accent)
+- Transcript Guidelines: Recommended audio tags ([excitedly], [serious], etc.)
+
+Supports ffmpeg conversion from PCM to MP3 for better compatibility.
 """
 
 import argparse
-import json
-import logging
 import os
 import shutil
 import subprocess
@@ -19,25 +35,25 @@ from pathlib import Path
 from typing import Optional
 
 from openai import OpenAI
-from dotenv import load_dotenv
 
-# Fix encoding for Windows console
-if sys.platform == "win32":
-    sys.stdout.reconfigure(encoding='utf-8')
+from shared_utils import setup_environment, get_logger, load_api_credentials, get_audio_duration, format_duration
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
-logger = logging.getLogger(__name__)
-
-# Load environment variables
-load_dotenv()
+# Initialize environment
+setup_environment()
+logger = get_logger(__name__)
 
 
 class VoiceGenerator:
-    """Generate voice narration from text using OpenRouter Gemini TTS."""
+    """Generate voice narration from text using OpenRouter Gemini TTS.
+    
+    This class processes narration text line by line, generating audio for each sentence.
+    When a narrator_prompt is provided, it serves as the base performance instruction
+    applied to every sentence, ensuring consistent voice character and delivery style
+    across all generated audio files.
+    
+    The narrator_prompt is passed as the 'instructions' parameter to the Gemini TTS
+    API, allowing advanced performance direction without modifying the actual narration text.
+    """
 
     def __init__(
         self,
@@ -67,7 +83,24 @@ class VoiceGenerator:
         logger.info(f"  Output: {self.output_dir}")
 
     def generate_speech(self, text: str, sentence_idx: int, narrator_prompt: Optional[str] = None) -> bool:
-        """Generate speech for a single sentence and save as MP3."""
+        """Generate speech for a single sentence and save as PCM.
+        
+        Args:
+            text: The narration text to speak (single sentence)
+            sentence_idx: Index number for output file naming (001, 002, etc.)
+            narrator_prompt: Optional base performance instruction from narrator prompt.
+                           Applied as 'instructions' to Gemini TTS API to control
+                           voice character, tone, pacing, style across all sentences.
+        
+        Returns:
+            True if generation successful, False otherwise.
+            
+        The narrator_prompt parameter:
+        - Is applied as the base instruction for voice delivery
+        - Comes from narrator_prompt_educational.txt, narrator_prompt_technical.txt, etc.
+        - Ensures consistent voice character and performance across all generated sentences
+        - Is passed to the API's 'instructions' parameter
+        """
         
         output_path = Path(self.output_dir) / f"{sentence_idx:03d}.pcm"
         
@@ -111,44 +144,11 @@ class VoiceGenerator:
 
     def get_audio_duration(self, file_path: str) -> float:
         """Get duration of an audio file in seconds using ffprobe."""
-        ffprobe_path = shutil.which("ffprobe")
-        
-        if not ffprobe_path:
-            return 0.0
-        
-        try:
-            result = subprocess.run(
-                [
-                    ffprobe_path,
-                    "-v", "error",
-                    "-show_entries", "format=duration",
-                    "-of", "default=noprint_wrappers=1:nokey=1:nokey=1",
-                    file_path
-                ],
-                capture_output=True,
-                text=True,
-                timeout=5
-            )
-            
-            if result.stdout.strip():
-                return float(result.stdout.strip())
-        except Exception as e:
-            logger.warning(f"Could not get duration for {file_path}: {e}")
-        
-        return 0.0
+        return get_audio_duration(file_path)
     
     def format_duration(self, seconds: float) -> str:
         """Format duration in seconds to HH:MM:SS format."""
-        hours = int(seconds // 3600)
-        minutes = int((seconds % 3600) // 60)
-        secs = int(seconds % 60)
-        
-        if hours > 0:
-            return f"{hours}h {minutes}m {secs}s"
-        elif minutes > 0:
-            return f"{minutes}m {secs}s"
-        else:
-            return f"{secs}s"
+        return format_duration(seconds)
     
     def get_total_duration(self) -> float:
         """Calculate total duration of all MP3 files in output directory."""
@@ -229,15 +229,6 @@ class VoiceGenerator:
         return converted_count
 
 
-def load_prompt_template(prompt_name: str, prompts_dir: Path) -> Optional[str]:
-    """Load a prompt template from file."""
-    file_path = prompts_dir / f"{prompt_name}.txt"
-    if not file_path.exists():
-        logger.warning(f"Prompt template not found: {file_path}")
-        return None
-    return file_path.read_text(encoding="utf-8")
-
-
 def main():
     parser = argparse.ArgumentParser(
         description="Generate voice narration from text using OpenRouter Gemini TTS"
@@ -286,29 +277,35 @@ def main():
     
     args = parser.parse_args()
     
-    # Validate API key
-    api_key = os.getenv("OPENROUTER_API_KEY")
-    if not api_key:
-        logger.error("❌ OPENROUTER_API_KEY environment variable not set")
+    # Load API credentials
+    try:
+        api_key, model = load_api_credentials()
+        if args.model != "google/gemini-3.1-flash-tts-preview":
+            model = args.model
+    except ValueError as e:
+        logger.error(f"❌ {e}")
         exit(1)
     
     # Validate narration file
-    if not os.path.exists(args.narration):
+    narration_path = Path(args.narration)
+    if not narration_path.exists():
         logger.error(f"❌ Narration file not found: {args.narration}")
         exit(1)
     
     # Load narration
-    with open(args.narration, 'r', encoding='utf-8') as f:
+    with open(narration_path, 'r', encoding='utf-8') as f:
         lines = [line.strip() for line in f if line.strip()]
     
     logger.info(f"📦 Loaded {len(lines)} narration sentences")
     
     # Load narrator prompt if provided
     narrator_prompt = None
-    if args.narrator_prompt and os.path.exists(args.narrator_prompt):
-        with open(args.narrator_prompt, 'r', encoding='utf-8') as f:
-            narrator_prompt = f.read()
-        logger.info(f"📄 Loaded narrator prompt")
+    if args.narrator_prompt:
+        narrator_path = Path(args.narrator_prompt)
+        if narrator_path.exists():
+            with open(narrator_path, 'r', encoding='utf-8') as f:
+                narrator_prompt = f.read()
+            logger.info(f"📄 Loaded narrator prompt")
     
     # Initialize voice generator
     generator = VoiceGenerator(

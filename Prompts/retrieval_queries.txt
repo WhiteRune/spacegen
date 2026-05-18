@@ -1,8 +1,12 @@
+#file:generate_video_package.py
+
 Task: Produce ranked retrieval queries for a scene.
+Integration Context: Called by `generate_retrieval_queries()`. The pipeline strictly expects a JSON array of strings extracted via `extract_json_from_response()`. 
 
 Inputs:
 - scene_keywords (array of strings)
 - short_claims (optional array of short claim strings)
 
 Instruction:
-From the scene keywords and short claims, generate 5 ranked search queries (strings) prioritized as follows: (1) primary sources and datasets, (2) educational organizations and agencies (NASA, ESA, universities), (3) review articles, (4) reputable media/science outlets. Return a JSON array of 5 query strings only.
+From the scene keywords and short claims, generate 5 ranked search queries (strings) prioritized as follows: (1) primary sources and datasets, (2) educational organizations and agencies (NASA, ESA, universities), (3) review articles, (4) reputable media/science outlets. 
+Return a pure JSON array of 5 query strings only (`[ "query 1", "query 2", ... ]`). Do NOT return objects or dictionaries.
